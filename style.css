@@ -1,0 +1,16 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+h1, h2 {
+  color: #222;
+}
