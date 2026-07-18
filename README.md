@@ -1,7 +1,7 @@
 # swayamjagtap.github.io
 A public learning journal documenting my journey with weekly blogs, projects as I progress
 
-This repository contains my personal website hosted with GitHub Pages. It is my public learning log, portfolio, and blog where I document what I study, build, and improve each week. [web:44][web:47]
+This repository contains my personal website hosted with GitHub Pages. It is my public learning log, portfolio, and blog where I document what I study, build, and improve each week.
 
 ## About
 
