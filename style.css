@@ -159,6 +159,18 @@ footer {
 .share-btn.copy { background-color: #e83e8c; } /* Matches your inline code color! */
 
 /* =========================================
+   FIX: Keep Share Buttons White
+   ========================================= */
+.container a.share-btn, 
+.container a.share-btn:visited {
+  color: #ffffff; 
+}
+
+.container a.share-btn:hover {
+  color: #ffffff; /* Keeps it white even when hovered */
+}
+
+/* =========================================
    GENERAL TEXT LINKS (Overrides browser defaults)
    ========================================= */
 main a, .container a {
