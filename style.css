@@ -157,3 +157,23 @@ footer {
 .share-btn.whatsapp { background-color: #25D366; }
 .share-btn.linkedin { background-color: #0077b5; }
 .share-btn.copy { background-color: #e83e8c; } /* Matches your inline code color! */
+
+/* =========================================
+   GENERAL TEXT LINKS (Overrides browser defaults)
+   ========================================= */
+main a, .container a {
+  color: #0066cc; /* Matches your nav links perfectly */
+  text-decoration: none; 
+  font-weight: 600; 
+}
+
+/* Stops links from turning that gross dark purple after you click them */
+main a:visited, .container a:visited {
+  color: #0066cc; 
+}
+
+/* Adds a nice subtle hover effect */
+main a:hover, .container a:hover {
+  text-decoration: underline;
+  color: #004488; /* A slightly darker navy for the hover effect */
+}
