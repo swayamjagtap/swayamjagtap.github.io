@@ -189,3 +189,44 @@ main a:hover, .container a:hover {
   text-decoration: underline;
   color: #004488; /* A slightly darker navy for the hover effect */
 }
+
+/* =========================================
+   FAQ DROPDOWNS (Details/Summary)
+   ========================================= */
+details {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+details:hover {
+  background-color: #f1f5f9; /* Slight color change when hovered */
+}
+
+summary {
+  font-weight: 600;
+  cursor: pointer;
+  color: #2c3e50;
+  font-size: 1.05em;
+  outline: none; /* Removes the ugly blue box when clicked */
+}
+
+summary:hover {
+  color: #0066cc; /* Matches your theme blue */
+}
+
+/* Add a line underneath the question when it's opened */
+details[open] summary {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+details p {
+  margin-bottom: 0;
+  margin-top: 10px;
+  color: #444;
+}
