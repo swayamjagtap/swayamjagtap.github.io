@@ -1,110 +1,182 @@
 /* =========================================
-   GLOBAL STYLES
+   THE BASE & VARIABLES (Dark Mode Pro)
    ========================================= */
+:root {
+  --midnight-navy: #0a0f1c;
+  --vivid-violet: #673AB7;
+  --violet-glow: rgba(103, 58, 183, 0.5);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --link-color: #b388ff; /* Lighter violet for better readability on dark bg */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+/* --- MICRO-INTERACTIONS --- */
+/* Custom Highlight Selection */
+::selection {
+  background-color: var(--vivid-violet);
+  color: #ffffff;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--midnight-navy);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  color: #333;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f4f7f6; /* Modern, light background from blog */
+  margin: 0;
+  padding: 0 20px;
+  overflow-x: hidden; 
 }
 
 /* =========================================
-   TYPOGRAPHY
+   TYPOGRAPHY (IDE / Code Editor Vibe)
    ========================================= */
-h1 {
-  color: #2c3e50;
-  margin-bottom: 25px;
-  font-size: 2.2em;
+h1, h2, h3, h4, h5, h6, .date, .number {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  color: #ffffff;
 }
 
-h2 {
-  color: #2c3e50;
-  margin-top: 0;
-  margin-bottom: 15px;
-}
+h1 { font-size: 2.2em; margin-bottom: 5px; }
+h2 { margin-top: 0; margin-bottom: 15px; }
+h3 { margin-bottom: 10px; }
 
 p {
   margin-bottom: 20px;
   font-size: 1.05em;
+  color: var(--text-muted);
 }
 
-ul {
-  margin-bottom: 20px;
-  padding-left: 20px;
-}
-
-li {
-  margin-bottom: 12px;
-  font-size: 1.05em;
-}
+ul { margin-bottom: 20px; padding-left: 20px; }
+li { margin-bottom: 12px; font-size: 1.05em; color: var(--text-muted); }
 
 hr {
   border: 0;
   height: 1px;
-  background: #e0e0e0;
+  background: var(--glass-border);
   margin: 30px 0;
 }
 
 code {
-  background-color: #f1f1f1;
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 0.9em;
-  color: #e83e8c;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--link-color);
 }
 
 /* =========================================
-   NAVIGATION & HEADER (Standard Pages)
+   PARTICLES BACKGROUND
    ========================================= */
-header {
-  margin-bottom: 30px;
+#particles-js {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-header h1 {
-  margin-bottom: 5px; /* Overrides the global h1 margin for the nav */
+/* =========================================
+   NAVIGATION & HEADER
+   ========================================= */
+.main-header {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.subtitle {
+  color: var(--vivid-violet);
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 nav a {
-  margin-right: 15px;
   text-decoration: none;
-  color: #0066cc;
-  font-weight: 500;
+  color: var(--text-main);
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
+/* Nav Link Hover Glow */
 nav a:hover {
-  text-decoration: underline;
+  background-color: rgba(103, 58, 183, 0.2);
+  color: #ffffff;
+  box-shadow: 0 0 15px var(--violet-glow);
 }
 
 /* =========================================
-   LAYOUT BLOCKS
+   GLASSMORPHISM BENTO CARDS
    ========================================= */
-/* Standard Page Sections (e.g., Academics) */
-main section {
-  margin-bottom: 25px;
-  background-color: #ffffff;
-  padding: 25px;
-  border-radius: 12px; /* Upgraded to match blog */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Upgraded to match blog */
+.bento-grid {
+  display: grid;
+  /* Auto-adapts to 1 or 2 columns based on screen size */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 40px;
 }
 
-/* Blog Specific Container */
+.bento-card, .container {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 30px;
+  transition: all 0.4s ease;
+}
+
+/* Single column for blog posts */
 .container {
-  background-color: #ffffff;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  max-width: 800px; /* Keeps the blog slightly narrower for better readability */
-  margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+}
+
+/* Neon Hover Effects */
+.bento-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--vivid-violet);
+  box-shadow: 0 0 25px var(--violet-glow);
+}
+
+/* =========================================
+   GENERAL TEXT LINKS
+   ========================================= */
+main a, .container a {
+  color: var(--link-color);
+  text-decoration: none; 
+  font-weight: 600; 
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+main a:visited, .container a:visited {
+  color: var(--link-color); 
+}
+
+/* Text link neon hover */
+main a:hover, .container a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px var(--violet-glow);
 }
 
 .date {
-  color: #7f8c8d;
+  color: var(--vivid-violet);
   font-size: 0.95em;
   margin-bottom: 25px;
-  font-style: italic;
 }
 
 /* =========================================
@@ -112,121 +184,69 @@ main section {
    ========================================= */
 footer {
   margin-top: 30px;
+  padding-bottom: 20px;
   text-align: center;
-  color: #666666;
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
   font-size: 0.9rem;
 }
 
 /* =========================================
-   SHARE BUTTONS (For Blog Posts)
+   SHARE BUTTONS
    ========================================= */
-.share-section {
-  margin-top: 40px;
-  text-align: center;
-}
-
+.share-section { margin-top: 40px; text-align: center; }
 .share-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 15px;
+  display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 15px;
 }
 
 .share-btn {
-  padding: 8px 16px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 0.95em;
-  font-weight: 600;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
-  transition: opacity 0.2s, transform 0.1s;
-  font-family: inherit;
+  padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 0.95em; font-weight: 600;
+  color: #ffffff !important; border: none; cursor: pointer; transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
 }
 
 .share-btn:hover {
-  opacity: 0.85;
-  text-decoration: none;
-  transform: translateY(-2px); /* Slight jump effect on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
-/* Brand Colors */
-.share-btn.twitter { background-color: #000000; }
+.share-btn.twitter { background-color: #1DA1F2; }
 .share-btn.whatsapp { background-color: #25D366; }
 .share-btn.linkedin { background-color: #0077b5; }
-.share-btn.copy { background-color: #e83e8c; } /* Matches your inline code color! */
+.share-btn.copy { background-color: var(--vivid-violet); }
 
 /* =========================================
-   FIX: Keep Share Buttons White
-   ========================================= */
-.container a.share-btn, 
-.container a.share-btn:visited {
-  color: #ffffff; 
-}
-
-.container a.share-btn:hover {
-  color: #ffffff; /* Keeps it white even when hovered */
-}
-
-/* =========================================
-   GENERAL TEXT LINKS (Overrides browser defaults)
-   ========================================= */
-main a, .container a {
-  color: #0066cc; /* Matches your nav links perfectly */
-  text-decoration: none; 
-  font-weight: 600; 
-}
-
-/* Stops links from turning that gross dark purple after you click them */
-main a:visited, .container a:visited {
-  color: #0066cc; 
-}
-
-/* Adds a nice subtle hover effect */
-main a:hover, .container a:hover {
-  text-decoration: underline;
-  color: #004488; /* A slightly darker navy for the hover effect */
-}
-
-/* =========================================
-   FAQ DROPDOWNS (Details/Summary)
+   FAQ DROPDOWNS (Glassmorphism adapted)
    ========================================= */
 details {
-  background-color: #f9f9f9;
+  background-color: rgba(255, 255, 255, 0.02);
   padding: 15px;
   border-radius: 8px;
   margin-bottom: 12px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--glass-border);
   transition: all 0.3s ease;
 }
 
 details:hover {
-  background-color: #f1f5f9; /* Slight color change when hovered */
+  background-color: rgba(255, 255, 255, 0.05); 
+  border-color: rgba(103, 58, 183, 0.4);
 }
 
 summary {
-  font-weight: 600;
-  cursor: pointer;
-  color: #2c3e50;
-  font-size: 1.05em;
-  outline: none; /* Removes the ugly blue box when clicked */
+  font-weight: 600; cursor: pointer; color: var(--text-main); font-size: 1.05em; outline: none;
 }
 
 summary:hover {
-  color: #0066cc; /* Matches your theme blue */
+  color: var(--link-color); 
 }
 
-/* Add a line underneath the question when it's opened */
 details[open] summary {
-  margin-bottom: 10px;
-  border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 10px;
+  margin-bottom: 10px; border-bottom: 1px solid var(--glass-border); padding-bottom: 10px;
 }
 
-details p {
-  margin-bottom: 0;
-  margin-top: 10px;
-  color: #444;
+details p { margin-bottom: 0; margin-top: 10px; color: var(--text-muted); }
+
+/* Makes the last card span the full width if there's an odd number of cards */
+.bento-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
