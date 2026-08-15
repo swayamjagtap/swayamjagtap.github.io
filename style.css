@@ -246,7 +246,7 @@ details[open] summary {
 
 details p { margin-bottom: 0; margin-top: 10px; color: var(--text-muted); }
 
-/* Makes the last card span the full width if there's an odd number of cards */
-.bento-card:last-child:nth-child(odd) {
+/* This class lets you manually stretch ANY card to full width */
+.full-width {
   grid-column: 1 / -1;
 }

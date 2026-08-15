@@ -3,11 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Academics</title>
+  <title>Academics | Swayam Jagtap</title>
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Particles.js for the Interactive Background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <!-- Interactive Background Container -->
+  <div id="particles-js"></div>
+
+  <header class="main-header">
     <h1>Academics</h1>
     <nav>
       <a href="index.html">Home</a>
@@ -19,81 +31,117 @@
   </header>
 
   <main>
-    <section>
-      <h2>What can you expect here?</h2>
-      <p>
-        While my Projects page is mostly for self-taught builds and late-night coding experiments, 
-        this space is dedicated to the actual algorithms, models, and lab work I do as a third-year 
-        Data Science student. It’s a mix of theory, practical implementation, and trying to figure 
-        out why the professor's code works but mine throws an error. 
-      </p>
-    </section>
+    <!-- Bento Grid Wrapper -->
+    <div class="bento-grid">
+      
+      <!-- Card 1: Intro -->
+      <div class="bento-card full-width">
+        <h2>What can you expect here?</h2>
+        <p>
+          While my Projects page is mostly for self-taught builds and late-night coding experiments, 
+          this space is dedicated to the actual algorithms, models, and lab work I do as a third-year 
+          Data Science student. It’s a mix of theory, practical implementation, and trying to figure 
+          out why the professor's code works but mine throws an error. 
+        </p>
+      </div>
 
-    <section>
-      <h2>Programs | Mini Projects</h2>
-      <ul>
-        <li>
-          <strong>Sentence segmentation and word tokenization : </strong>
-          Basic sentence segmentation and word tokenization techniques using Python libraries. <br>
-          <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/blob/main/academics/Programs-and-Mini-Projects/sentence-segmentation-and-word-tokenization.ipynb" target="_blank" rel="noopener noreferrer">
-            View code
-          </a>
-        </li>
-        <li>
-          <strong>Stemming and Lemmatization : </strong>
-          Techniques for reducing words to their root forms. <br>
-          <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/blob/main/academics/Programs-and-Mini-Projects/stemming-and-lemmatization.ipynb" target="_blank" rel="noopener noreferrer">
-            View code
-          </a>
-        </li>
-        <li>
-          <strong>Loading and Exploring Datasets : </strong>
-          Methods for loading and exploring datasets in Python. <br>
-          <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/blob/main/academics/Programs-and-Mini-Projects/load-and-explore-dataset.ipynb" target="_blank" rel="noopener noreferrer">
-            View code
-          </a>
-        </li>
-        <li>
-          <strong>Bag of Words representation using python : </strong>
-          A simple implementation of the Bag of Words model for text representation.<br>
-          <a href = "https://github.com/swayamjagtap/swayamjagtap.github.io/blob/main/academics/Programs-and-Mini-Projects/bag_of_words.ipynb" target = "_blank" rel="noopener"
-          >View code</a>
-        </li>
+      <!-- Card 2: Mini Projects -->
+      <div class="bento-card">
+        <h2>Programs | Mini Projects</h2>
+        <ul>
+          <li>
+            <strong>Sentence segmentation and word tokenization : </strong>
+            Basic sentence segmentation and word tokenization techniques using Python libraries. <br>
+            <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/blob/main/academics/Programs-and-Mini-Projects/sentence-segmentation-and-word-tokenization.ipynb" target="_blank" rel="noopener noreferrer">
+              View code
+            </a>
+          </li>
+          <li>
+            <strong>Stemming and Lemmatization : </strong>
+            Techniques for reducing words to their root forms. <br>
+            <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/blob/main/academics/Programs-and-Mini-Projects/stemming-and-lemmatization.ipynb" target="_blank" rel="noopener noreferrer">
+              View code
+            </a>
+          </li>
+          <li>
+            <strong>Loading and Exploring Datasets : </strong>
+            Methods for loading and exploring datasets in Python. <br>
+            <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/blob/main/academics/Programs-and-Mini-Projects/load-and-explore-dataset.ipynb" target="_blank" rel="noopener noreferrer">
+              View code
+            </a>
+          </li>
+          <li>
+            <strong>Bag of Words representation using python : </strong>
+            A simple implementation of the Bag of Words model for text representation.<br>
+            <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/blob/main/academics/Programs-and-Mini-Projects/bag_of_words.ipynb" target="_blank" rel="noopener noreferrer">View code</a>
+          </li>
+          <li>
+            <strong>Linear Regression Implementation : </strong>
+            To predict housing prices based on features such as size and location. <br>
+            <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/blob/main/academics/Programs-and-Mini-Projects/linear_regression.ipynb" target="_blank" rel="noopener noreferrer">
+              View code
+            </a>
+          </li>
+        </ul>
+      </div>
 
-        <li>
-          <strong>Linear Regression Implementation : </strong>
-          To predict housing prices based on features such as size and location. <br>
-          <a href = "https://github.com/swayamjagtap/swayamjagtap.github.io/blob/main/academics/Programs-and-Mini-Projects/linear_regression.ipynb" target = "_blank" rel="noopener noreferrer">
-            View code
-          </a>
-        </li>
-        <!-- Add new weeks here as you go -->
-      </ul>
-    </section>
+      <!-- Card 3: Research Drafts -->
+      <div class="bento-card">
+        <h2>Research Drafts & Concepts</h2>
+        <p>
+          A space for my academic drafts, feasibility studies, and literature reviews. Because apparently, you can't just build an app—you have to write a 20-page document proving it's actually a good idea first.
+        </p>
+        <ul>
+          <li>
+            <strong>Sustainable Community Development Through Peer-to-Peer Learning (Working Draft)</strong> <br>
+            My first formal research paper exploring how we can replace isolated online courses with real-world and digital shadowing experiences. It dives into the psychological drawbacks of unguided e-learning and the necessity of community-driven skill sharing. <br><br>
+            
+            <strong>Related Links:</strong><br>
+            <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/blob/main/academics/Research-Drafts-and-Concepts/Sustainable-Community-Development-Draft.pdf" target="_blank" rel="noopener noreferrer">Read the Working Draft (Still writing it, please hold)</a> <br>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmxvbZCNESlrEFIlyIML5wwD3gAd6LY6OXVn8lfGk01yaLxg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Save my grade: Be a legend. Participate in the Research (I promise it's short)</a> <br>
+            <a href="posts/week-03.html#faq">Read the FAQ: Answering the questions from the absolute legends who actually filled out my research form.</a>
+          </li>
+        </ul>
+      </div>
 
-    <section>
-      <h2>Research Drafts & Concepts</h2>
-      <p>
-        A space for my academic drafts, feasibility studies, and literature reviews. Because apparently, you can't just build an app—you have to write a 20-page document proving it's actually a good idea first.
-      </p>
-      <ul>
-        <li>
-          <strong>Sustainable Community Development Through Peer-to-Peer Learning (Working Draft)</strong> <br>
-          My first formal research paper exploring how we can replace isolated online courses with real-world and digital shadowing experiences. It dives into the psychological drawbacks of unguided e-learning and the necessity of community-driven skill sharing. <br><br>
-          
-          <strong>Related Links:</strong><br>
-          <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/blob/main/academics/Research-Drafts-and-Concepts/Sustainable-Community-Development-Draft.pdf" target="_blank" rel="noopener noreferrer">Read the Working Draft (Still writing it, please hold)</a> <br>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmxvbZCNESlrEFIlyIML5wwD3gAd6LY6OXVn8lfGk01yaLxg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Save my grade: Be a legend. Participate in the Research (I promise it's short)</a> <br>
-          <!-- The #faq at the end tells the browser to jump directly to that specific section -->
-          <a href="posts/week-03.html#faq">Read the FAQ: Answering the questions from the absolute legends who actually filled out my research form.</a>
-        </li>
-      </ul>
-    </section>
-
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2026 Swayam Jagtap</p>
   </footer>
+
+  <!-- Particles initialization script -->
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#673AB7" }, /* Vivid Violet Nodes */
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.6, "random": false },
+        "size": { "value": 3, "random": true },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#673AB7",
+          "opacity": 0.3,
+          "width": 1
+        },
+        "move": { "enable": true, "speed": 2, "direction": "none", "out_mode": "out" }
+      },
+      "interactivity": {
+        "detect_on": "window",
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" }, 
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "grab": { "distance": 140, "line_linked": { "opacity": 0.8 } },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
 </body>
 </html>
