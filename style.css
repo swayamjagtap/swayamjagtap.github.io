@@ -264,10 +264,10 @@ details p { margin-bottom: 0; margin-top: 10px; color: var(--text-muted); }
   h2 { font-size: 1.3em; }
   
   .subtitle { 
-    font-size: 0.8rem; 
-    line-height: 1.8; /* Gives the text room to breathe when it wraps */
-    margin-bottom: 25px;
-    padding: 0 10px;
+    font-size: 0.75rem; 
+    line-height: 1.8; 
+    margin: 0 auto 25px auto;
+    max-width: 250px; /* Forces a clean, centered wrap */
   }
 
   p, li, details summary {
@@ -278,7 +278,7 @@ details p { margin-bottom: 0; margin-top: 10px; color: var(--text-muted); }
   .main-header { margin: 25px auto; }
 
   nav {
-    gap: 10px; /* Brings the links slightly closer together */
+    gap: 10px; 
   }
 
   nav a {
@@ -301,13 +301,13 @@ details p { margin-bottom: 0; margin-top: 10px; color: var(--text-muted); }
 
   /* 4. Mobile "Tap" Feedback (Active States) */
   .bento-card:active {
-    transform: scale(0.98); /* Shrinks slightly when pressed */
+    transform: scale(0.98); 
     border-color: var(--vivid-violet);
   }
 
   nav a:active, .share-btn:active {
     transform: scale(0.95);
-    background-color: rgba(103, 58, 183, 0.3); /* Flashes violet on tap */
+    background-color: rgba(103, 58, 183, 0.3); 
     border-radius: 8px;
     color: #ffffff;
   }
