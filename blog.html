@@ -4,11 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog | Weekly Learning Log</title>
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Particles.js for the Interactive Background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <!-- Interactive Background Container -->
+  <div id="particles-js"></div>
+
+  <header class="main-header">
     <h1>Blog</h1>
+    <!-- Converted your h3 tagline into the glowing subtitle class -->
+    <p class="subtitle">Built by me, read by you. Same time next week.</p>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -17,48 +31,84 @@
       <a href="academics.html">Academics</a>
     </nav>
   </header>
-  <h3><em>Built by me, read by you. Same time next week.</em></h3>
-
+  
   <main>
-    <section>
-      <h2>The Digital Diary</h2>
-      <p>
-        This is where I hold myself accountable. Every week, I drop a quick recap of what I studied, 
-        what I actually managed to build, the bugs that almost made me throw my laptop out the window, 
-        and what I plan to tackle next. Think of it as a public learning journal.
-      </p>
-    </section>
+    <div class="bento-grid">
+      
+      <!-- Card 1: Intro -->
+      <div class="bento-card full-width">
+        <h2>The Digital Diary</h2>
+        <p>
+          This is where I hold myself accountable. Every week, I drop a quick recap of what I studied, 
+          what I actually managed to build, the bugs that almost made me throw my laptop out the window, 
+          and what I plan to tackle next. Think of it as a public learning journal.
+        </p>
+      </div>
 
-    <section>
-      <h2>The Archives</h2>
-      <ul>
-        <li>
-          <strong><a href="posts/week-03.html">Week 3: I Was Supposed to Reveal My App. Then I Got Hospitalized.</a></strong> <br>
-          Answering all your burning FAQs about the new shadowing app, flexing my brand new comment section, and trying to manage three major events from a hospital bed.
-          <em>(August 8, 2026)</em>
-        </li>
-        
-        <li>
-          <strong><a href="posts/week-02.html">Week 2: Why I Built a Website Nobody Asked For</a></strong> <br>
-          A chaotic week of surviving sickness, stepping up to head the VibeHack hackathon 
-          for the Dataverse committee, and getting a harsh reality check on leadership.
-          <em>(August 2, 2026)</em>
-        </li>
-        
-        <li>
-          <strong><a href="posts/week-01.html">Week 1: The First Week of Chaos and Code </a></strong> <br>
-          Recap of Python simulators, text-based adventure games, and some quarter-final heartbreak.
-          <em>(July 25, 2026)</em>
-          
-        </li>
+      <!-- Card 2: The Archives -->
+      <div class="bento-card full-width">
+        <h2>The Archives</h2>
+        <ul>
+          <li>
+            <strong><a href="posts/week-03.html">Week 3: I Was Supposed to Reveal My App. Then I Got Hospitalized.</a></strong> <br>
+            Answering all your burning FAQs about the new shadowing app, flexing my brand new comment section, and trying to manage three major events from a hospital bed. <br>
+            <span class="date" style="margin-bottom: 0;">August 8, 2026</span>
+          </li>
+          <br>
+          <li>
+            <strong><a href="posts/week-02.html">Week 2: Why I Built a Website Nobody Asked For</a></strong> <br>
+            A chaotic week of surviving sickness, stepping up to head the VibeHack hackathon 
+            for the Dataverse committee, and getting a harsh reality check on leadership. <br>
+            <span class="date" style="margin-bottom: 0;">August 2, 2026</span>
+          </li>
+          <br>
+          <li>
+            <strong><a href="posts/week-01.html">Week 1: The First Week of Chaos and Code </a></strong> <br>
+            Recap of Python simulators, text-based adventure games, and some quarter-final heartbreak. <br>
+            <span class="date" style="margin-bottom: 0;">July 25, 2026</span>
+          </li>
+          <!-- Add new weeks here as you go -->
+        </ul>
+      </div>
 
-        <!-- Add new weeks here as you go -->
-      </ul>
-    </section>
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2026 Swayam Jagtap</p>
   </footer>
+
+  <!-- Particles initialization script -->
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#673AB7" }, /* Vivid Violet */
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.6, "random": false },
+        "size": { "value": 3, "random": true },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#673AB7",
+          "opacity": 0.3,
+          "width": 1
+        },
+        "move": { "enable": true, "speed": 2, "direction": "none", "out_mode": "out" }
+      },
+      "interactivity": {
+        "detect_on": "window",
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" }, 
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "grab": { "distance": 140, "line_linked": { "opacity": 0.8 } },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
 </body>
 </html>
