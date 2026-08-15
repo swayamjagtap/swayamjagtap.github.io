@@ -4,10 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Swayam Jagtap</title>
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Particles.js for the Interactive Background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <!-- Interactive Background Container -->
+  <div id="particles-js"></div>
+
+  <header class="main-header">
     <h1>Projects</h1>
     <nav>
       <a href="index.html">Home</a>
@@ -19,79 +31,119 @@
   </header>
 
   <main>
-    <section>
-      <h2>Overview</h2>
-      <p>
-        Here’s where I keep the receipts. This is a collection of my personal coding builds—ranging 
-        from basic Python logic simulators to (eventually) heavy-duty data analysis models. 
-        Because watching tutorials is easy, but building things from scratch is where the actual learning 
-        (and debugging) happens.
-      </p>
-    </section>
+    <!-- Bento Grid Wrapper -->
+    <div class="bento-grid">
+      
+      <!-- Card 1: Overview -->
+      <div class="bento-card full-width">
+        <h2>Overview</h2>
+        <p>
+          Here’s where I keep the receipts. This is a collection of my personal coding builds—ranging 
+          from basic Python logic simulators to (eventually) heavy-duty data analysis models. 
+          Because watching tutorials is easy, but building things from scratch is where the actual learning 
+          (and debugging) happens.
+        </p>
+      </div>
 
-    <section>
-      <h2>Completed projects</h2>
-      <ul>
-        
-        <li>
-          <strong>Tip Calculator:</strong> 
-          A basic Python program that calculates the exact tip percentage for your bill.<br>
-          <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/tip-calculator.py" target="_blank" rel="noopener noreferrer">
-              View Code
-          </a>
-        </li>
+      <!-- Card 2: Completed Projects -->
+      <div class="bento-card full-width">
+        <h2>Completed projects</h2>
+        <ul>
+          
+          <li>
+            <strong>Tip Calculator:</strong> 
+            A basic Python program that calculates the exact tip percentage for your bill.<br>
+            <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/tip-calculator.py" target="_blank" rel="noopener noreferrer">
+                View Code
+            </a>
+          </li>
+          <br>
+          <li>
+            <strong>Pizza Order:</strong> 
+            This program simulates your pizza ordering experience, where every option you select dynamically 
+            updates your final bill.<br>
+            <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/pizza_order.py" target="_blank" rel="noopener noreferrer">
+                View Code
+            </a>
+          </li>
+          <br>
+          <li>
+            <strong>Roller Coaster:</strong> 
+            A simulation of the rollercoaster ticket-buying process. (You'll have to try it yourself to get a 
+            better understanding!)<br>
+            <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/roller_coaster.py" target="_blank" rel="noopener noreferrer">
+                View Code
+            </a>
+          </li>
+          <br>
+          <li>
+            <strong>Treasure Game:</strong> 
+            A text-based adventure built on the logic from the Pizza and Roller Coaster programs. 
+            You have to choose your paths, and they might—or might <em>not</em>—lead you to the treasure.<br> 
+            <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/treasure_game.py" target="_blank" rel="noopener noreferrer">
+                View Code
+            </a>
+          </li>
+          <br>
+          <li>
+            <strong>Rock-Paper-Scissors:</strong> 
+            The classic hand-gesture game, brought to life using Python and the 
+            <a href="https://docs.python.org/3/library/random.html" target="_blank">random</a> library.<br>
+            <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/rock-paper-scissors.py" target="_blank" rel="noopener noreferrer">
+                View Code
+            </a>
+          </li>
+          <br>
+          <li>
+            <strong>Password Generator:</strong> 
+            A Python program that generates passwords based on your unique requirements. 
+            Want all characters, numbers, special characters, and symbols? I’ve got you covered!<br>
+            <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/password_generator.py" target="_blank" rel="noopener noreferrer">
+                View Code
+            </a>
+          </li>
 
-        <li>
-          <strong>Pizza Order:</strong> 
-          This program simulates your pizza ordering experience, where every option you select dynamically 
-          updates your final bill.<br>
-          <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/pizza_order.py" target="_blank" rel="noopener noreferrer">
-              View Code
-          </a>
-        </li>
+        </ul>
+      </div>
 
-        <li>
-          <strong>Roller Coaster:</strong> 
-          A simulation of the rollercoaster ticket-buying process. (You'll have to try it yourself to get a 
-          better understanding!)<br>
-          <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/roller_coaster.py" target="_blank" rel="noopener noreferrer">
-              View Code
-          </a>
-        </li>
-
-        <li>
-          <strong>Treasure Game:</strong> 
-          A text-based adventure built on the logic from the Pizza and Roller Coaster programs. 
-          You have to choose your paths, and they might—or might <em>not</em>—lead you to the treasure.<br> 
-          <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/treasure_game.py" target="_blank" rel="noopener noreferrer">
-              View Code
-          </a>
-        </li>
-
-        <li>
-          <strong>Rock-Paper-Scissors:</strong> 
-          The classic hand-gesture game, brought to life using Python and the 
-          <a href="https://docs.python.org/3/library/random.html" target="_blank">random</a> library.<br>
-          <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/rock-paper-scissors.py" target="_blank" rel="noopener noreferrer">
-              View Code
-          </a>
-        </li>
-        
-        <li>
-          <strong>Password Generator:</strong> 
-          A Python program that generates passwords based on your unique requirements. 
-          Want all characters, numbers, special characters, and symbols? I’ve got you covered!<br>
-          <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/password_generator.py" target="_blank" rel="noopener noreferrer">
-              View Code
-          </a>
-        </li>
-
-      </ul>
-    </section>
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2026 Swayam Jagtap</p>
   </footer>
+
+  <!-- Particles initialization script -->
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#673AB7" }, /* Vivid Violet Nodes */
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.6, "random": false },
+        "size": { "value": 3, "random": true },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#673AB7",
+          "opacity": 0.3,
+          "width": 1
+        },
+        "move": { "enable": true, "speed": 2, "direction": "none", "out_mode": "out" }
+      },
+      "interactivity": {
+        "detect_on": "window",
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" }, 
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "grab": { "distance": 140, "line_linked": { "opacity": 0.8 } },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
 </body>
 </html>
