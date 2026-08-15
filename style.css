@@ -250,3 +250,56 @@ details p { margin-bottom: 0; margin-top: 10px; color: var(--text-muted); }
 .full-width {
   grid-column: 1 / -1;
 }
+
+/* =========================================
+   MOBILE OPTIMIZATION (Media Queries)
+   ========================================= */
+@media (max-width: 768px) {
+  /* 1. Scale down the massive typography */
+  h1 { 
+    font-size: 1.7em; 
+    margin-bottom: 10px;
+  }
+  
+  h2 { 
+    font-size: 1.3em; 
+  }
+  
+  .subtitle { 
+    font-size: 0.85em; 
+    margin-bottom: 15px;
+  }
+
+  p, li, details summary {
+    font-size: 0.95em; /* Slightly smaller body text for readability */
+  }
+
+  /* 2. Tighten up the Header & Navigation */
+  .main-header {
+    margin: 25px auto;
+  }
+
+  nav {
+    gap: 10px; /* Brings the links closer together */
+  }
+
+  nav a {
+    padding: 6px 10px;
+    font-size: 0.9em;
+  }
+
+  /* 3. Rebalance the Grid and Cards */
+  body {
+    padding: 0 10px; /* Reduces the dead space on the extreme edges of the screen */
+  }
+
+  .bento-grid {
+    gap: 15px; /* Less space between cards */
+    padding-bottom: 20px;
+  }
+
+  .bento-card, .container {
+    padding: 20px; /* Gives the text inside the card more breathing room */
+    border-radius: 12px; /* Slightly softer corners for mobile */
+  }
+}
