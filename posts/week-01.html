@@ -4,10 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The First Week of Chaos and Code</title>
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Particles.js for the Interactive Background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
-  <header>
+  <!-- Interactive Background Container -->
+  <div id="particles-js"></div>
+
+  <header class="main-header">
     <nav>
       <a href="../index.html">Home</a>
       <a href="../about.html">About</a>
@@ -17,127 +29,160 @@
     </nav>
   </header>
 
-  <div class="container">
-    <h1>The First Week of Chaos and Code</h1>
-    <p class="date">July 25, 2026</p>
-        
-    <p>Before we start, I want to say this to anyone expecting a traditional, formal blog: you’re in the wrong place. Since this is my very first post—where I’ll just be introducing myself and talking about my first week—I've decided to keep things light.</p>
-        
-    <p>For those who don't know me, I'm Swayam (which actually translates to "self" in Sanskrit). Academically, I'm a Data Science student who woke up one day and decided, "Hey! Let’s make a website." The goal is to have a space where I can publish my work and projects—whether they're educational, silly, or completely meaningless-yet-fun. I figured while I’m at it, I might as well write weekly blogs to talk about what I’ve been doing, hold myself accountable for my targets, and most importantly, just be myself.</p>
-        
-    <p>This past week was absolute chaos! I had my cricket, football, and rugby tournaments. (Don’t ask me how it went, because we lost in the quarter-finals.) Between all that rushing around, I still had to keep up with my Python lectures. Honestly, I had zero energy left to start something totally new, so I decided to revise and refine my previous projects instead.</p>
-        
-    <p>Yes, that might sound like a convenient excuse for not progressing further, but I feel there’s a silver lining here. There is a huge difference between just completing a course and actually learning a new skill. Anyone can finish a course on time, but implementing what you've learned? That's not everyone’s cup of tea.</p>
-        
-    <p>With that in mind, here’s a look at the projects I brushed up on this week:</p>
-        
-    <ul>
-      <li>
-        <strong>Tip Calculator:</strong> 
-        A basic Python program that calculates the exact tip percentage for your bill.<br>
-        <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/tip-calculator.py" target="_blank" rel="noopener noreferrer">
-            View Code
-        </a>
-      </li>
-      <li>
-        <strong>Pizza Order:</strong> 
-        This program simulates your pizza ordering experience, where every option you select dynamically 
-        updates your final bill.<br>
-        <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/pizza_order.py" target="_blank" rel="noopener noreferrer">
-            View Code
-        </a>
-      </li>
-      <li>
-        <strong>Roller Coaster:</strong> 
-        A simulation of the rollercoaster ticket-buying process. (You'll have to try it yourself to get a 
-        better understanding!)<br>
-        <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/roller_coaster.py" target="_blank" rel="noopener noreferrer">
-            View Code
-        </a>
-      </li>
-      <li>
-        <strong>Treasure Game:</strong> A text-based adventure built on the logic from the Pizza and Roller 
-        Coaster programs. You have to choose your paths, and they might—or might <em>not</em>—lead you to 
-        the treasure.<br>
-        <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/treasure_game.py" target="_blank" rel="noopener noreferrer">
-            View Code
-        </a>
-      </li>
-      <li>
-        <strong>Rock-Paper-Scissors:</strong> 
-        The classic hand-gesture game, brought to life using Python and the 
-        <a href="https://docs.python.org/3/library/random.html" target="_blank">random</a> library.<br>
-        <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/rock_paper_scissors.py" target="_blank" rel="noopener noreferrer">
-            View Code
-        </a>
-      </li>
-      <li>
-        <strong>Password Generator:</strong> 
-        A Python program that generates passwords based on your unique requirements. 
-        Want all characters, numbers, special characters, and symbols? I’ve got you covered!<br>
-        <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/password_generator.py" target="_blank" rel="noopener noreferrer">
-            View Code
-        </a>
-      </li>
-    </ul>
+  <main>
+    <!-- The .container class creates the wide, centered Glassmorphism card -->
+    <div class="container">
+      <h1>The First Week of Chaos and Code</h1>
+      <p class="date">July 25, 2026</p>
+          
+      <p>Before we start, I want to say this to anyone expecting a traditional, formal blog: you’re in the wrong place. Since this is my very first post—where I’ll just be introducing myself and talking about my first week—I've decided to keep things light.</p>
+          
+      <p>For those who don't know me, I'm Swayam (which actually translates to "self" in Sanskrit). Academically, I'm a Data Science student who woke up one day and decided, "Hey! Let’s make a website." The goal is to have a space where I can publish my work and projects—whether they're educational, silly, or completely meaningless-yet-fun. I figured while I’m at it, I might as well write weekly blogs to talk about what I’ve been doing, hold myself accountable for my targets, and most importantly, just be myself.</p>
+          
+      <p>This past week was absolute chaos! I had my cricket, football, and rugby tournaments. (Don’t ask me how it went, because we lost in the quarter-finals.) Between all that rushing around, I still had to keep up with my Python lectures. Honestly, I had zero energy left to start something totally new, so I decided to revise and refine my previous projects instead.</p>
+          
+      <p>Yes, that might sound like a convenient excuse for not progressing further, but I feel there’s a silver lining here. There is a huge difference between just completing a course and actually learning a new skill. Anyone can finish a course on time, but implementing what you've learned? That's not everyone’s cup of tea.</p>
+          
+      <p>With that in mind, here’s a look at the projects I brushed up on this week:</p>
+          
+      <ul>
+        <li>
+          <strong>Tip Calculator:</strong> 
+          A basic Python program that calculates the exact tip percentage for your bill.<br>
+          <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/tip-calculator.py" target="_blank" rel="noopener noreferrer">
+              View Code
+          </a>
+        </li>
+        <br>
+        <li>
+          <strong>Pizza Order:</strong> 
+          This program simulates your pizza ordering experience, where every option you select dynamically 
+          updates your final bill.<br>
+          <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/pizza_order.py" target="_blank" rel="noopener noreferrer">
+              View Code
+          </a>
+        </li>
+        <br>
+        <li>
+          <strong>Roller Coaster:</strong> 
+          A simulation of the rollercoaster ticket-buying process. (You'll have to try it yourself to get a 
+          better understanding!)<br>
+          <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/roller_coaster.py" target="_blank" rel="noopener noreferrer">
+              View Code
+          </a>
+        </li>
+        <br>
+        <li>
+          <strong>Treasure Game:</strong> A text-based adventure built on the logic from the Pizza and Roller 
+          Coaster programs. You have to choose your paths, and they might—or might <em>not</em>—lead you to 
+          the treasure.<br>
+          <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/treasure_game.py" target="_blank" rel="noopener noreferrer">
+              View Code
+          </a>
+        </li>
+        <br>
+        <li>
+          <strong>Rock-Paper-Scissors:</strong> 
+          The classic hand-gesture game, brought to life using Python and the 
+          <a href="https://docs.python.org/3/library/random.html" target="_blank">random</a> library.<br>
+          <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/rock_paper_scissors.py" target="_blank" rel="noopener noreferrer">
+              View Code
+          </a>
+        </li>
+        <br>
+        <li>
+          <strong>Password Generator:</strong> 
+          A Python program that generates passwords based on your unique requirements. 
+          Want all characters, numbers, special characters, and symbols? I’ve got you covered!<br>
+          <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/password_generator.py" target="_blank" rel="noopener noreferrer">
+              View Code
+          </a>
+        </li>
+      </ul>
 
-    <!-- Share Section -->
-    <hr>
-    <div class="share-section">
-      <p><strong>If this chaos somehow resonated with you, go bother a friend with the link.</strong></p>
-      <div class="share-buttons">
-        <!-- Twitter / X Share -->
-        <a href="https://twitter.com/intent/tweet?text=Check out this blog post by Swayam!&url=https://swayamjagtap.github.io/posts/week-01.html" target="_blank" rel="noopener noreferrer" class="share-btn twitter">X (Twitter)</a>
-        
-        <!-- WhatsApp Share -->
-        <a href="https://api.whatsapp.com/send?text=Check out Swayam's latest blog post! https://swayamjagtap.github.io/posts/week-01.html" target="_blank" rel="noopener noreferrer" class="share-btn whatsapp">WhatsApp</a>
-        
-        <!-- LinkedIn Share -->
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://swayamjagtap.github.io/posts/week-01.html" target="_blank" rel="noopener noreferrer" class="share-btn linkedin">LinkedIn</a>
-        
-        <!-- Copy Link Button (Uses a tiny bit of inline JavaScript) -->
-        <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="share-btn copy">Copy Link</button>
+      <!-- Share Section -->
+      <hr>
+      <div class="share-section">
+        <p><strong>If this chaos somehow resonated with you, go bother a friend with the link.</strong></p>
+        <div class="share-buttons">
+          <!-- Twitter / X Share -->
+          <a href="https://twitter.com/intent/tweet?text=Check out this blog post by Swayam!&url=https://swayamjagtap.github.io/posts/week-01.html" target="_blank" rel="noopener noreferrer" class="share-btn twitter">X (Twitter)</a>
+          
+          <!-- WhatsApp Share -->
+          <a href="https://api.whatsapp.com/send?text=Check out Swayam's latest blog post! https://swayamjagtap.github.io/posts/week-01.html" target="_blank" rel="noopener noreferrer" class="share-btn whatsapp">WhatsApp</a>
+          
+          <!-- LinkedIn Share -->
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://swayamjagtap.github.io/posts/week-01.html" target="_blank" rel="noopener noreferrer" class="share-btn linkedin">LinkedIn</a>
+          
+          <!-- Copy Link Button -->
+          <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="share-btn copy">Copy Link</button>
+        </div>
       </div>
-    </div>
 
-    <br>
-    
-    <!-- 👇 NEW GRAPHCOMMENT SECTION 👇 -->
-    <div class="comments-section">
-      <div id="graphcomment"></div>
-      <script type="text/javascript">
+      <br>
       
-        /* - - - CONFIGURATION VARIABLES - - - */
-      
-        var __semio__params = {
-          graphcommentId: "swayam-jagtap-blog", // your site shortname
-      
-          behaviour: {
-            // Ensures each blog post URL gets its own unique comment section
-            uid: window.location.pathname, 
-          },
-      
-        }
-      
-        /* - - - DON'T EDIT BELOW THIS LINE - - - */
-      
-        function __semio__onload() {
-          __semio__gc_graphlogin(__semio__params)
-        }
-      
-        (function() {
-          var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
-          gc.onload = __semio__onload; gc.defer = true; gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
-        })();
-        
-      </script>
-    </div>
-    <!-- 👆 ---------------------------- 👆 -->
+      <!-- 👇 GRAPHCOMMENT SECTION 👇 -->
+      <div class="comments-section">
+        <div id="graphcomment"></div>
+        <script type="text/javascript">
+          /* - - - CONFIGURATION VARIABLES - - - */
+          var __semio__params = {
+            graphcommentId: "swayam-jagtap-blog", 
+            behaviour: {
+              uid: window.location.pathname, 
+            },
+          }
+          /* - - - DON'T EDIT BELOW THIS LINE - - - */
+          function __semio__onload() {
+            __semio__gc_graphlogin(__semio__params)
+          }
+          (function() {
+            var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
+            gc.onload = __semio__onload; gc.defer = true; gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
+          })();
+        </script>
+      </div>
+      <!-- 👆 ---------------------------- 👆 -->
 
-  </div>
+    </div>
+  </main>
+
   <footer>
     <p>&copy; 2026 Swayam Jagtap</p>
   </footer>
+
+  <!-- Particles initialization script -->
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#673AB7" }, /* Vivid Violet */
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.6, "random": false },
+        "size": { "value": 3, "random": true },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#673AB7",
+          "opacity": 0.3,
+          "width": 1
+        },
+        "move": { "enable": true, "speed": 2, "direction": "none", "out_mode": "out" }
+      },
+      "interactivity": {
+        "detect_on": "window",
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" }, 
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "grab": { "distance": 140, "line_linked": { "opacity": 0.8 } },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
 </body>
 </html>
