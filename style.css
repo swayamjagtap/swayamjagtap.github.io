@@ -255,32 +255,30 @@ details p { margin-bottom: 0; margin-top: 10px; color: var(--text-muted); }
    MOBILE OPTIMIZATION (Media Queries)
    ========================================= */
 @media (max-width: 768px) {
-  /* 1. Scale down the massive typography */
+  /* 1. Scale down and fix subtitle wrapping */
   h1 { 
     font-size: 1.7em; 
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   
-  h2 { 
-    font-size: 1.3em; 
-  }
+  h2 { font-size: 1.3em; }
   
   .subtitle { 
-    font-size: 0.85em; 
-    margin-bottom: 15px;
+    font-size: 0.8rem; 
+    line-height: 1.8; /* Gives the text room to breathe when it wraps */
+    margin-bottom: 25px;
+    padding: 0 10px;
   }
 
   p, li, details summary {
-    font-size: 0.95em; /* Slightly smaller body text for readability */
+    font-size: 0.95em; 
   }
 
-  /* 2. Tighten up the Header & Navigation */
-  .main-header {
-    margin: 25px auto;
-  }
+  /* 2. Tighten up the Header & Navigation (Keeping original inline layout) */
+  .main-header { margin: 25px auto; }
 
   nav {
-    gap: 10px; /* Brings the links closer together */
+    gap: 10px; /* Brings the links slightly closer together */
   }
 
   nav a {
@@ -289,17 +287,28 @@ details p { margin-bottom: 0; margin-top: 10px; color: var(--text-muted); }
   }
 
   /* 3. Rebalance the Grid and Cards */
-  body {
-    padding: 0 10px; /* Reduces the dead space on the extreme edges of the screen */
-  }
+  body { padding: 0 10px; }
 
   .bento-grid {
-    gap: 15px; /* Less space between cards */
+    gap: 15px; 
     padding-bottom: 20px;
   }
 
   .bento-card, .container {
-    padding: 20px; /* Gives the text inside the card more breathing room */
-    border-radius: 12px; /* Slightly softer corners for mobile */
+    padding: 20px; 
+    border-radius: 12px; 
+  }
+
+  /* 4. Mobile "Tap" Feedback (Active States) */
+  .bento-card:active {
+    transform: scale(0.98); /* Shrinks slightly when pressed */
+    border-color: var(--vivid-violet);
+  }
+
+  nav a:active, .share-btn:active {
+    transform: scale(0.95);
+    background-color: rgba(103, 58, 183, 0.3); /* Flashes violet on tap */
+    border-radius: 8px;
+    color: #ffffff;
   }
 }
