@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Swayam Jagtap</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swayam Jagtap | Data Science Student & Developer</title>
   
-  <!-- NEW: Google Fonts (Inter & JetBrains Mono) -->
+  <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   
-  <!-- NEW: Particles.js for the Interactive Background -->
+  <!-- Particles.js for the Interactive Background -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- NEW: Interactive Background Container -->
+  <!-- Interactive Background Container -->
   <div id="particles-js"></div>
 
   <header class="main-header">
     <h1>Swayam Prashant Jagtap</h1>
-    <p class="subtitle">Data Science Student | Python Developer(ongoing) | Blogger</p>
+    <p class="subtitle">Data Science Student | Python Developer (ongoing) | Blogger</p>
     <nav>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="blog.html">Blog</a>
       <a href="projects.html">Projects</a>
@@ -31,56 +32,108 @@
   </header>
 
   <main>
-    <!-- NEW: Bento Grid Wrapper -->
+    <!-- Bento Grid Wrapper -->
     <div class="bento-grid">
       
-      <!-- Card 1 -->
+      <!-- LEFT COLUMN - TOP: Latest Update -->
       <div class="bento-card">
         <h2>Latest Update</h2>
-        <div>
-          <h3><a href="posts/week-03.html">Week 3: I Was Supposed to Reveal My App. Then I Got Hospitalized.</a></h3>
-          <p class="date">August 8, 2026</p>
-          <p>
-            How do you drop the master plan for a new shadowing app, code a live comment section, and organize a massive college hackathon all at the same time? Step one: Get unexpectedly admitted to the hospital.
-          </p>
-          <p>
-            <a href="posts/week-03.html" class="read-more"><strong>Read the full post →</strong></a>
-          </p>
+        <p class="date" style="margin-bottom: 10px;">
+          <a href="posts/week-04.html" style="color: var(--vivid-violet); text-decoration: none;">
+            Week 4: Egos, Exes, and Coding Through the Chaos
+          </a>
+        </p>
+        <p style="font-size: 0.9em; margin-bottom: 15px;">August 15, 2026</p>
+        <p>How a sick morning jog led to the website looking gorgeous.</p>
+        <p style="margin-bottom: 0;"><a href="posts/week-04.html">Read the full post →</a></p>
+      </div>
+
+      <!-- RIGHT COLUMN: Tall Research Paper Card (Spans both rows naturally) -->
+      <div class="bento-card" style="grid-row: span 2;">
+        <h2>Help Shape My Next Research Paper (And App Concept!)</h2>
+        <p>
+          Alongside my weekly blog updates and coding projects, I've been diving into academic research on the "Guidance Gap"—the reason why learning new skills through solo online tutorials is so frustrating.
+        </p>
+        <p>
+          To fix this, I’m writing a paper proposing a real-world, peer-to-peer skill-shadowing app. But before I finalize the research, I need data.
+        </p>
+        <p>
+          Want to be part of the project? Take 2 minutes to drop your brutally honest feedback in my anonymous survey. I'll be publishing the final insights and data right here on the site once it's done!
+        </p>
+        <p style="margin-top: 25px;">
+          <a href="https://forms.gle/your-survey-link-here" target="_blank" rel="noopener noreferrer">
+            Click here to review the concept and drop your thoughts
+          </a>
+        </p>
+      </div>
+
+      <!-- LEFT COLUMN - BOTTOM: Milestone Counter (Fills the gap perfectly!) -->
+      <div class="bento-card">
+        <h2>Live Metrics</h2>
+        <p style="margin-bottom: 20px; color: var(--text-muted); font-size: 0.95em;">A quick look at the dashboard of my life right now.</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+          
+          <!-- Stat 1 -->
+          <div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.4em; font-weight: 700; color: #ffffff;">Day 06</div>
+            <div style="font-size: 0.85em; color: var(--text-muted); margin-top: 2px;">Wrestling Python into submission</div>
+          </div>
+
+          <!-- Stat 2 -->
+          <div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.4em; font-weight: 700; color: #ffffff;">6 Built</div>
+            <div style="font-size: 0.85em; color: var(--text-muted); margin-top: 2px;">From tip calculators to text adventures</div>
+          </div>
+
+          <!-- Stat 3 -->
+          <div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.4em; font-weight: 700; color: #ffffff;">4 Weeks</div>
+            <div style="font-size: 0.85em; color: var(--text-muted); margin-top: 2px;">Autobiographying my chaotic life</div>
+          </div>
+
+          <!-- Stat 4 -->
+          <div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.4em; font-weight: 700; color: #ffffff;">1 Concept</div>
+            <div style="font-size: 0.85em; color: var(--text-muted); margin-top: 2px;">Solving the 'Guidance Gap'</div>
+          </div>
+
+          <!-- Stat 5 -->
+          <div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.4em; font-weight: 700; color: #ffffff;">∞ Cups of Chai</div>
+            <div style="font-size: 0.85em; color: var(--text-muted); margin-top: 2px;">The official fuel of late-night debugging</div>
+          </div>
+
+          <!-- Stat 6 -->
+          <div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.4em; font-weight: 700; color: #ffffff;">109 pts</div>
+            <div style="font-size: 0.85em; color: var(--text-muted); margin-top: 2px;">Manifesting a legendary comeback season</div>
+          </div>
+
         </div>
       </div>
 
-      <!-- Card 2 -->
-      <div class="bento-card">
-        <h2>Help Shape My Next Research Paper (And App Concept!)</h2>
-        <p>Alongside my weekly blog updates and coding projects, I've been diving into academic research on the "Guidance Gap"—the reason why learning new skills through solo online tutorials is so frustrating.</p>
-        <p>To fix this, I’m writing a paper proposing a real-world, peer-to-peer skill-shadowing app. But before I finalize the research, I need data.</p>
-        <p>Want to be part of the project? Take 2 minutes to drop your brutally honest feedback in my anonymous survey. I'll be publishing the final insights and data right here on the site once it's done!</p>
-        <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdmxvbZCNESlrEFIlyIML5wwD3gAd6LY6OXVn8lfGk01yaLxg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer"><strong>Click here to review the concept and drop your thoughts</strong></a></p>
-      </div>
-
-      <!-- Card 3 -->
+      <!-- FULL WIDTH CARD AT THE BOTTOM -->
       <div class="bento-card full-width">
         <h2>What I’m doing right now</h2>
-        <p>Between surviving my third year of Data Science and beating Python into submission via 
-        the 100 Days of Code challenge, I decided to actually build a portfolio. 
-        I created this corner of the internet as my digital diary to document the weekly chaos, 
-        track my projects (both the serious and the completely meaningless-yet-fun ones), 
-        and basically force myself to stay accountable.</p>
+        <p style="margin-bottom: 0;">
+          Between surviving my third year of Data Science and beating Python into submission via the 100 Days of Code challenge, I decided to actually build a portfolio. I created this corner of the internet as my digital diary to document the weekly chaos, track my projects (both the serious and the completely meaningless-yet-fun ones), and basically force myself to stay accountable.
+        </p>
       </div>
 
     </div>
   </main>
-  
+
   <footer>
     <p>&copy; 2026 Swayam Jagtap</p>
   </footer>
 
-  <!-- NEW: Particles initialization script (Generates the neural network) -->
+  <!-- Particles initialization script -->
   <script>
     particlesJS("particles-js", {
       "particles": {
         "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
-        "color": { "value": "#673AB7" }, /* Vivid Violet */
+        "color": { "value": "#673AB7" }, /* Vivid Violet Nodes */
         "shape": { "type": "circle" },
         "opacity": { "value": 0.6, "random": false },
         "size": { "value": 3, "random": true },
