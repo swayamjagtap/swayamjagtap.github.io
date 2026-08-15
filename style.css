@@ -147,7 +147,7 @@ nav a:hover {
 }
 
 /* Neon Hover Effects */
-.bento-card:hover {
+.bento-card:hover, .container:hover {
   transform: translateY(-5px);
   border-color: var(--vivid-violet);
   box-shadow: 0 0 25px var(--violet-glow);
@@ -300,7 +300,7 @@ details p { margin-bottom: 0; margin-top: 10px; color: var(--text-muted); }
   }
 
   /* 4. Mobile "Tap" Feedback (Active States) */
-  .bento-card:active {
+  .bento-card:active, .container:active {
     transform: scale(0.98); 
     border-color: var(--vivid-violet);
   }
