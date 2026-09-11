@@ -122,8 +122,8 @@ nav a:hover {
    ========================================= */
 .bento-grid {
   display: grid;
-  /* Fixed mobile overflow by reducing minmax from 350px to 280px */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* Auto-adapts to 1 or 2 columns based on screen size */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 25px;
   max-width: 1000px;
   margin: 0 auto;
@@ -393,7 +393,6 @@ details p { margin-bottom: 0; margin-top: 10px; color: var(--text-muted); }
   font-style: italic;
   font-size: 0.95em;
   color: var(--text-muted);
-  flex-grow: users;
   flex-grow: 1;
   margin-bottom: 15px;
 }
