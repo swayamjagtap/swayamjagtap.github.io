@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>F1 Telemetry | Swayam Jagtap</title>
+
+  <meta
+    name="description"
+    content="Interactive F1 telemetry dashboard powered by a live FastAPI WebSocket backend."
+  />
+
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+
+  <div id="particles-js"></div>
+
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <header class="main-header telemetry-site-header">
+
+    <h1>F1 Telemetry</h1>
+
+    <p class="subtitle">
+      Dataset-driven telemetry explorer
+    </p>
+
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../projects.html">Projects</a>
+      <a href="../../blog.html">Blog</a>
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN TELEMETRY APPLICATION
+       ===================================================== -->
+
+  <main class="telemetry-app">
+
+
+    <!-- ===================================================
+         HERO
+         =================================================== -->
+
+    <section class="bento-card telemetry-hero">
+
+      <div>
+
+        <p class="telemetry-kicker">
+          LIVE TELEMETRY SYSTEM
+        </p>
+
+        <h2>
+          Explore F1 data
+        </h2>
+
+        <p>
+          Select a season, event, session, lap and drivers,
+          then stream telemetry directly from the backend.
+        </p>
+
+      </div>
+
+
+      <div class="telemetry-status">
+
+        <span
+          id="connection-dot"
+          class="status-dot"
+        ></span>
+
+        <span id="connection-status">
+          Disconnected
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         SESSION / DATASET CONTROLS
+         =================================================== -->
+
+    <section class="bento-card telemetry-controls-card">
+
+      <div class="telemetry-section-heading">
+
+        <h2>
+          Session
+        </h2>
+
+        <span id="dataset-status">
+          Loading datasets...
+        </span>
+
+      </div>
+
+
+      <div class="telemetry-controls-grid">
+
+
+        <!-- SEASON -->
+
+        <label class="telemetry-field">
+
+          <span>
+            Season
+          </span>
+
+          <select id="season-select">
+
+            <option value="">
+              Loading...
+            </option>
+
+          </select>
+
+        </label>
+
+
+        <!-- GRAND PRIX -->
+
+        <label class="telemetry-field">
+
+          <span>
+            Grand Prix
+          </span>
+
+          <select
+            id="event-select"
+            disabled
+          >
+
+            <option value="">
+              Select season
+            </option>
+
+          </select>
+
+        </label>
+
+
+        <!-- SESSION -->
+
+        <label class="telemetry-field">
+
+          <span>
+            Session
+          </span>
+
+          <select
+            id="session-select"
+            disabled
+          >
+
+            <option value="">
+              Select event
+            </option>
+
+          </select>
+
+        </label>
+
+
+        <!-- LAP -->
+
+        <label class="telemetry-field">
+
+          <span>
+            Lap
+          </span>
+
+          <select
+            id="lap-select"
+            disabled
+          >
+
+            <option value="">
+              Select drivers
+            </option>
+
+          </select>
+
+        </label>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         DRIVER SELECTION
+         =================================================== -->
+
+    <section class="bento-card telemetry-controls-card">
+
+      <div class="telemetry-section-heading">
+
+        <h2>
+          Drivers
+        </h2>
+
+        <span id="driver-status">
+          Select a session
+        </span>
+
+      </div>
+
+
+      <div
+        id="driver-list"
+        class="driver-selection-grid"
+      >
+
+        <div class="telemetry-empty-state">
+          Drivers will appear here.
+        </div>
+
+      </div>
+
+
+      <div class="telemetry-action-row">
+
+        <button
+          id="play-button"
+          class="telemetry-button primary"
+          type="button"
+          disabled
+        >
+          Connect &amp; Play
+        </button>
+
+
+        <button
+          id="stop-button"
+          class="telemetry-button secondary"
+          type="button"
+          disabled
+        >
+          Stop
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         PLAYBACK
+         =================================================== -->
+
+    <section class="bento-card telemetry-playback-card">
+
+      <div class="telemetry-section-heading">
+
+        <h2>
+          Playback
+        </h2>
+
+        <span id="playback-label">
+          Waiting
+        </span>
+
+      </div>
+
+
+      <div class="telemetry-progress-track">
+
+        <div
+          id="playback-progress"
+          class="telemetry-progress-bar"
+        ></div>
+
+      </div>
+
+
+      <div class="telemetry-playback-meta">
+
+        <span id="frame-label">
+          Frame 0
+        </span>
+
+        <span id="progress-label">
+          0%
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         DRIVER TELEMETRY
+         =================================================== -->
+
+    <section>
+
+      <div
+        id="telemetry-grid"
+        class="telemetry-driver-grid"
+      >
+
+        <div class="bento-card telemetry-empty-state">
+
+          Connect to a session to start telemetry playback.
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer>
+
+    <p>
+      &copy; 2026 Swayam Jagtap · F1 Telemetry
+    </p>
+
+  </footer>
+
+
+  <!-- =====================================================
+       PARTICLES.JS
+       ===================================================== -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+
+  <script>
+    particlesJS("particles-js", {
+
+      "particles": {
+
+        "number": {
+          "value": 60,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+
+        "color": {
+          "value": "#673AB7"
+        },
+
+        "shape": {
+          "type": "circle"
+        },
+
+        "opacity": {
+          "value": 0.6,
+          "random": false
+        },
+
+        "size": {
+          "value": 3,
+          "random": true
+        },
+
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#673AB7",
+          "opacity": 0.3,
+          "width": 1
+        },
+
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "out_mode": "out"
+        }
+
+      },
+
+
+      "interactivity": {
+
+        "detect_on": "window",
+
+        "events": {
+
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          }
+
+        },
+
+
+        "modes": {
+
+          "grab": {
+            "distance": 140,
+            "line_linked": {
+              "opacity": 0.8
+            }
+          },
+
+          "push": {
+            "particles_nb": 4
+          }
+
+        }
+
+      },
+
+
+      "retina_detect": true
+
+    });
+  </script>
+
+
+  <!-- =====================================================
+       TELEMETRY APPLICATION
+       ===================================================== -->
+
+  <script src="./app.js"></script>
+
+</body>
+</html>

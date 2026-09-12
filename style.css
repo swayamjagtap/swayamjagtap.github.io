@@ -1,23 +1,32 @@
 /* =========================================
    THE BASE & VARIABLES (Dark Mode Pro)
    ========================================= */
+
 :root {
   --midnight-navy: #0a0f1c;
   --vivid-violet: #673AB7;
   --violet-glow: rgba(103, 58, 183, 0.5);
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
-  --link-color: #b388ff; /* Lighter violet for better readability on dark bg */
+  --link-color: #b388ff;
   --glass-bg: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.08);
 }
 
-/* --- MICRO-INTERACTIONS --- */
-/* Custom Highlight Selection */
+
+/* =========================================
+   MICRO-INTERACTIONS
+   ========================================= */
+
 ::selection {
   background-color: var(--vivid-violet);
   color: #ffffff;
 }
+
+
+/* =========================================
+   BODY
+   ========================================= */
 
 body {
   background-color: var(--midnight-navy);
@@ -26,21 +35,40 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0 20px;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
+
 /* =========================================
-   TYPOGRAPHY (IDE / Code Editor Vibe)
+   TYPOGRAPHY
    ========================================= */
-h1, h2, h3, h4, h5, h6, .date, .number {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.date,
+.number {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 700;
   color: #ffffff;
 }
 
-h1 { font-size: 2.2em; margin-bottom: 5px; }
-h2 { margin-top: 0; margin-bottom: 15px; }
-h3 { margin-bottom: 10px; }
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 5px;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
 
 p {
   margin-bottom: 20px;
@@ -48,8 +76,16 @@ p {
   color: var(--text-muted);
 }
 
-ul { margin-bottom: 20px; padding-left: 20px; }
-li { margin-bottom: 12px; font-size: 1.05em; color: var(--text-muted); }
+ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 12px;
+  font-size: 1.05em;
+  color: var(--text-muted);
+}
 
 hr {
   border: 0;
@@ -67,9 +103,11 @@ code {
   color: var(--link-color);
 }
 
+
 /* =========================================
    PARTICLES BACKGROUND
    ========================================= */
+
 #particles-js {
   position: fixed;
   width: 100vw;
@@ -79,9 +117,11 @@ code {
   z-index: -1;
 }
 
+
 /* =========================================
    NAVIGATION & HEADER
    ========================================= */
+
 .main-header {
   text-align: center;
   margin: 40px auto;
@@ -110,19 +150,19 @@ nav a {
   transition: all 0.3s ease;
 }
 
-/* Nav Link Hover Glow */
 nav a:hover {
   background-color: rgba(103, 58, 183, 0.2);
   color: #ffffff;
   box-shadow: 0 0 15px var(--violet-glow);
 }
 
+
 /* =========================================
    GLASSMORPHISM BENTO CARDS
    ========================================= */
+
 .bento-grid {
   display: grid;
-  /* Auto-adapts to 1 or 2 columns based on screen size */
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 25px;
   max-width: 1000px;
@@ -130,7 +170,8 @@ nav a:hover {
   padding-bottom: 40px;
 }
 
-.bento-card, .container {
+.bento-card,
+.container {
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -140,35 +181,38 @@ nav a:hover {
   transition: all 0.4s ease;
 }
 
-/* Single column for blog posts */
 .container {
   max-width: 800px;
   margin: 0 auto 40px auto;
 }
 
-/* Neon Hover Effects */
-.bento-card:hover, .container:hover {
+.bento-card:hover,
+.container:hover {
   transform: translateY(-5px);
   border-color: var(--vivid-violet);
   box-shadow: 0 0 25px var(--violet-glow);
 }
 
+
 /* =========================================
    GENERAL TEXT LINKS
    ========================================= */
-main a, .container a {
+
+main a,
+.container a {
   color: var(--link-color);
-  text-decoration: none; 
-  font-weight: 600; 
+  text-decoration: none;
+  font-weight: 600;
   transition: text-shadow 0.3s ease, color 0.3s ease;
 }
 
-main a:visited, .container a:visited {
-  color: var(--link-color); 
+main a:visited,
+.container a:visited {
+  color: var(--link-color);
 }
 
-/* Text link neon hover */
-main a:hover, .container a:hover {
+main a:hover,
+.container a:hover {
   color: #ffffff;
   text-shadow: 0 0 8px var(--violet-glow);
 }
@@ -179,9 +223,11 @@ main a:hover, .container a:hover {
   margin-bottom: 25px;
 }
 
+
 /* =========================================
    FOOTER
    ========================================= */
+
 footer {
   margin-top: 30px;
   padding-bottom: 20px;
@@ -191,17 +237,34 @@ footer {
   font-size: 0.9rem;
 }
 
+
 /* =========================================
    SHARE BUTTONS
    ========================================= */
-.share-section { margin-top: 40px; text-align: center; }
+
+.share-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
 .share-buttons {
-  display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 15px;
 }
 
 .share-btn {
-  padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 0.95em; font-weight: 600;
-  color: #ffffff !important; border: none; cursor: pointer; transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: #ffffff !important;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
   font-family: 'Inter', sans-serif;
 }
 
@@ -210,14 +273,27 @@ footer {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
-.share-btn.twitter { background-color: #1DA1F2; }
-.share-btn.whatsapp { background-color: #25D366; }
-.share-btn.linkedin { background-color: #0077b5; }
-.share-btn.copy { background-color: var(--vivid-violet); }
+.share-btn.twitter {
+  background-color: #1DA1F2;
+}
+
+.share-btn.whatsapp {
+  background-color: #25D366;
+}
+
+.share-btn.linkedin {
+  background-color: #0077b5;
+}
+
+.share-btn.copy {
+  background-color: var(--vivid-violet);
+}
+
 
 /* =========================================
-   FAQ DROPDOWNS (Glassmorphism adapted)
+   FAQ DROPDOWNS
    ========================================= */
+
 details {
   background-color: rgba(255, 255, 255, 0.02);
   padding: 15px;
@@ -228,32 +304,48 @@ details {
 }
 
 details:hover {
-  background-color: rgba(255, 255, 255, 0.05); 
+  background-color: rgba(255, 255, 255, 0.05);
   border-color: rgba(103, 58, 183, 0.4);
 }
 
 summary {
-  font-weight: 600; cursor: pointer; color: var(--text-main); font-size: 1.05em; outline: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-main);
+  font-size: 1.05em;
+  outline: none;
 }
 
 summary:hover {
-  color: var(--link-color); 
+  color: var(--link-color);
 }
 
 details[open] summary {
-  margin-bottom: 10px; border-bottom: 1px solid var(--glass-border); padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 10px;
 }
 
-details p { margin-bottom: 0; margin-top: 10px; color: var(--text-muted); }
+details p {
+  margin-bottom: 0;
+  margin-top: 10px;
+  color: var(--text-muted);
+}
 
-/* This class lets you manually stretch ANY card to full width */
+
+/* =========================================
+   FULL WIDTH
+   ========================================= */
+
 .full-width {
   grid-column: 1 / -1;
 }
 
+
 /* =========================================
-   CONTACT FORM STYLES
+   CONTACT FORM
    ========================================= */
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -265,14 +357,14 @@ details p { margin-bottom: 0; margin-top: 10px; color: var(--text-muted); }
 .contact-form textarea {
   width: 100%;
   padding: 12px 15px;
-  background: rgba(255, 255, 255, 0.05); /* Translucent dark background */
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--glass-border);
   border-radius: 8px;
   color: var(--text-main);
   font-family: 'Inter', sans-serif;
   font-size: 0.95em;
   transition: all 0.3s ease;
-  box-sizing: border-box; /* Keeps padding inside the box */
+  box-sizing: border-box;
 }
 
 .contact-form input::placeholder,
@@ -280,7 +372,6 @@ details p { margin-bottom: 0; margin-top: 10px; color: var(--text-muted); }
   color: var(--text-muted);
 }
 
-/* Adds the purple neon glow when a user clicks into the text box */
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
@@ -294,34 +385,41 @@ details p { margin-bottom: 0; margin-top: 10px; color: var(--text-muted); }
   min-height: 100px;
 }
 
+
 /* =========================================
-   MOBILE OPTIMIZATION (Media Queries)
+   MOBILE OPTIMIZATION
    ========================================= */
+
 @media (max-width: 768px) {
-  /* 1. Scale down and fix subtitle wrapping */
-  h1 { 
-    font-size: 1.7em; 
+
+  h1 {
+    font-size: 1.7em;
     margin-bottom: 5px;
   }
-  
-  h2 { font-size: 1.3em; }
-  
-  .subtitle { 
-    font-size: 0.75rem; 
-    line-height: 1.8; 
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  .subtitle {
+    font-size: 0.75rem;
+    line-height: 1.8;
     margin: 0 auto 25px auto;
-    max-width: 250px; /* Forces a clean, centered wrap */
+    max-width: 250px;
   }
 
-  p, li, details summary {
-    font-size: 0.95em; 
+  p,
+  li,
+  details summary {
+    font-size: 0.95em;
   }
 
-  /* 2. Tighten up the Header & Navigation (Keeping original inline layout) */
-  .main-header { margin: 25px auto; }
+  .main-header {
+    margin: 25px auto;
+  }
 
   nav {
-    gap: 10px; 
+    gap: 10px;
   }
 
   nav a {
@@ -329,36 +427,41 @@ details p { margin-bottom: 0; margin-top: 10px; color: var(--text-muted); }
     font-size: 0.9em;
   }
 
-  /* 3. Rebalance the Grid and Cards */
-  body { padding: 0 10px; }
+  body {
+    padding: 0 10px;
+  }
 
   .bento-grid {
-    gap: 15px; 
+    gap: 15px;
     padding-bottom: 20px;
   }
 
-  .bento-card, .container {
-    padding: 20px; 
-    border-radius: 12px; 
+  .bento-card,
+  .container {
+    padding: 20px;
+    border-radius: 12px;
   }
 
-  /* 4. Mobile "Tap" Feedback (Active States) */
-  .bento-card:active, .container:active {
-    transform: scale(0.98); 
+  .bento-card:active,
+  .container:active {
+    transform: scale(0.98);
     border-color: var(--vivid-violet);
   }
 
-  nav a:active, .share-btn:active {
+  nav a:active,
+  .share-btn:active {
     transform: scale(0.95);
-    background-color: rgba(103, 58, 183, 0.3); 
+    background-color: rgba(103, 58, 183, 0.3);
     border-radius: 8px;
     color: #ffffff;
   }
 }
 
+
 /* =========================================
-   TESTIMONIAL GRID STYLES (Week 6 Blog)
+   TESTIMONIAL GRID STYLES
    ========================================= */
+
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -367,7 +470,7 @@ details p { margin-bottom: 0; margin-top: 10px; color: var(--text-muted); }
 }
 
 .testimonial-card {
-  background: rgba(103, 58, 183, 0.05); /* Subtle purple glass tint */
+  background: rgba(103, 58, 183, 0.05);
   border: 1px solid rgba(103, 58, 183, 0.2);
   border-radius: 12px;
   padding: 20px;
@@ -412,4 +515,636 @@ details p { margin-bottom: 0; margin-top: 10px; color: var(--text-muted); }
 .testimonial-author span {
   color: var(--text-muted);
   font-size: 0.85em;
+}
+
+
+/* =========================================================
+   F1 TELEMETRY DASHBOARD
+   Scoped styles — does not affect the rest of the portfolio
+   ========================================================= */
+
+.telemetry-app {
+  width: min(1400px, 100%);
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.telemetry-site-header {
+  max-width: 1200px;
+}
+
+
+/* =========================================================
+   TELEMETRY HERO
+   ========================================================= */
+
+.telemetry-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.telemetry-kicker {
+  margin: 0 0 10px;
+  color: var(--vivid-violet);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.telemetry-hero h2 {
+  margin-bottom: 8px;
+  font-size: 2rem;
+}
+
+.telemetry-hero p:not(.telemetry-kicker) {
+  max-width: 760px;
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   CONNECTION STATUS
+   ========================================================= */
+
+.telemetry-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  white-space: nowrap;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #64748b;
+  box-shadow: 0 0 0 transparent;
+  transition: all 0.3s ease;
+}
+
+.status-dot.connecting {
+  background: #f59e0b;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.7);
+  animation: telemetry-pulse 1.2s ease-in-out infinite;
+}
+
+.status-dot.connected {
+  background: #22c55e;
+  box-shadow: 0 0 14px rgba(34, 197, 94, 0.75);
+}
+
+.status-dot.error {
+  background: #ef4444;
+  box-shadow: 0 0 14px rgba(239, 68, 68, 0.75);
+}
+
+@keyframes telemetry-pulse {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.telemetry-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.telemetry-section-heading h2 {
+  margin: 0;
+}
+
+.telemetry-section-heading > span {
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+}
+
+
+/* =========================================================
+   CONTROLS
+   ========================================================= */
+
+.telemetry-controls-card {
+  margin-bottom: 20px;
+}
+
+.telemetry-controls-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.telemetry-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.telemetry-field > span {
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   SELECT ELEMENTS
+   ========================================================= */
+
+.telemetry-field select {
+  width: 100%;
+  min-height: 46px;
+  box-sizing: border-box;
+  padding: 0 14px;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+
+  background:
+    linear-gradient(45deg, transparent 50%, var(--text-muted) 50%)
+      calc(100% - 18px) 20px / 6px 6px no-repeat,
+    linear-gradient(135deg, var(--text-muted) 50%, transparent 50%)
+      calc(100% - 13px) 20px / 6px 6px no-repeat,
+    rgba(255, 255, 255, 0.04);
+
+  color: var(--text-main);
+
+  color-scheme: dark;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.telemetry-field select:hover:not(:disabled) {
+  border-color: rgba(179, 136, 255, 0.45);
+  background-color: rgba(103, 58, 183, 0.08);
+}
+
+.telemetry-field select:focus {
+  outline: none;
+  border-color: var(--vivid-violet);
+  box-shadow: 0 0 0 3px rgba(103, 58, 183, 0.16);
+}
+
+.telemetry-field select:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   DROPDOWN OPTIONS
+   ========================================================= */
+
+.telemetry-field select option {
+  background-color: #151a29;
+  color: #f8fafc;
+  padding: 10px;
+}
+
+.telemetry-field select option:checked {
+  background-color: #673ab7;
+  color: #ffffff;
+}
+
+.telemetry-field select option:disabled {
+  background-color: #151a29;
+  color: #64748b;
+}
+
+
+/* =========================================================
+   DRIVER SELECTION
+   ========================================================= */
+
+.driver-selection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+  gap: 9px;
+  margin-bottom: 22px;
+}
+
+.driver-select-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+
+  min-height: 62px;
+  padding: 10px 12px;
+
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.025);
+  color: var(--text-main);
+
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.driver-select-button strong {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95rem;
+}
+
+.driver-select-button span {
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.driver-select-button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(179, 136, 255, 0.5);
+  background: rgba(103, 58, 183, 0.08);
+}
+
+.driver-select-button.selected {
+  border-color: var(--vivid-violet);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(103, 58, 183, 0.19),
+      rgba(103, 58, 183, 0.06)
+    );
+  box-shadow:
+    inset 0 0 0 1px rgba(179, 136, 255, 0.12),
+    0 0 18px rgba(103, 58, 183, 0.13);
+}
+
+.driver-select-button.selected strong {
+  color: #ffffff;
+}
+
+.driver-select-button.selected::after {
+  content: "SELECTED";
+  color: var(--link-color);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.telemetry-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.telemetry-button {
+  min-height: 42px;
+  padding: 0 18px;
+
+  border: 1px solid var(--glass-border);
+  border-radius: 9px;
+
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+.telemetry-button.primary {
+  background: var(--vivid-violet);
+  color: #ffffff;
+  border-color: var(--vivid-violet);
+}
+
+.telemetry-button.primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 0 20px var(--violet-glow);
+}
+
+.telemetry-button.secondary {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-main);
+}
+
+.telemetry-button.secondary:hover:not(:disabled) {
+  border-color: rgba(179, 136, 255, 0.45);
+}
+
+.telemetry-button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   PLAYBACK
+   ========================================================= */
+
+.telemetry-playback-card {
+  margin-bottom: 20px;
+}
+
+.telemetry-progress-track {
+  width: 100%;
+  height: 8px;
+  overflow: hidden;
+
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.telemetry-progress-bar {
+  width: 0%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      #4c1d95,
+      var(--vivid-violet),
+      #b388ff
+    );
+
+  box-shadow: 0 0 14px rgba(103, 58, 183, 0.65);
+
+  transition: width 0.12s linear;
+}
+
+.telemetry-playback-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  margin-top: 10px;
+
+  color: var(--text-muted);
+
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+}
+
+
+/* =========================================================
+   DRIVER TELEMETRY GRID
+   ========================================================= */
+
+.telemetry-driver-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding-bottom: 20px;
+}
+
+.telemetry-driver-card {
+  min-width: 0;
+  padding: 22px;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.telemetry-driver-card:hover {
+  transform: translateY(-3px);
+}
+
+.telemetry-driver-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+
+  margin-bottom: 22px;
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.telemetry-driver-code {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--link-color);
+
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.telemetry-driver-heading h3 {
+  margin: 0;
+  font-size: 1.45rem;
+}
+
+.telemetry-driver-heading p {
+  margin: 4px 0 0;
+  font-size: 0.8rem;
+}
+
+.telemetry-live-badge {
+  padding: 5px 8px;
+
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  border-radius: 999px;
+
+  background: rgba(34, 197, 94, 0.08);
+  color: #86efac;
+
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   METRICS
+   ========================================================= */
+
+.telemetry-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.telemetry-metric {
+  min-width: 0;
+  min-height: 84px;
+  padding: 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.telemetry-metric > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--text-muted);
+
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.telemetry-metric strong {
+  display: block;
+
+  overflow: hidden;
+
+  color: #ffffff;
+
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.25rem;
+  line-height: 1.1;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.telemetry-metric small {
+  color: var(--text-muted);
+  font-size: 0.68rem;
+}
+
+
+/* =========================================================
+   EMPTY / STATUS STATES
+   ========================================================= */
+
+.telemetry-empty-state {
+  grid-column: 1 / -1;
+
+  padding: 28px 22px;
+
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.015);
+
+  color: var(--text-muted);
+
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+
+/* =========================================================
+   TELEMETRY RESPONSIVE LAYOUT
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .telemetry-controls-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+@media (max-width: 900px) {
+
+  .telemetry-hero {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .telemetry-controls-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .telemetry-driver-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 620px) {
+
+  .telemetry-app {
+    padding-bottom: 25px;
+  }
+
+  .telemetry-hero h2 {
+    font-size: 1.55rem;
+  }
+
+  .telemetry-status {
+    width: fit-content;
+  }
+
+  .driver-selection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .telemetry-metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .telemetry-driver-card {
+    padding: 18px;
+  }
+
+  .telemetry-driver-heading {
+    gap: 12px;
+  }
 }
