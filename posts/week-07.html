@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 7: Duct-Taped Code, Cloud Servers in a Coma, and Why I Deleted Half My F1 Codebase 🫠</title>
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Particles.js for the Interactive Background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+  <link rel="stylesheet" href="../style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PC6S28FE8Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PC6S28FE8Y');
+  </script>
+</head>
+<body>
+  <!-- Interactive Background Container -->
+  <div id="particles-js"></div>
+
+  <header class="main-header">
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../academics.html">Academics</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- CARD 1: The Main Blog Post -->
+    <div class="container">
+      <h1>Week 7: Duct-Taped Code, Cloud Servers in a Coma, and Why I Deleted Half My F1 Codebase 🫠</h1>
+      <p class="date">September 12, 2026</p>
+          
+      <p>Two blog drops in less than seven days?! Who even am I anymore? Feels like I’m running this site like RB19 back in 2023 🗿🗿🗿</p>
+
+      <p>I might just surprise my own self by overcoming something I have only dreamt about—procrastination 😅😅😅</p>
+
+      <p>Yeahh, for as long as I remember, I've been the biggest procrastinator known to everyone I know. I hated putting effort into things just because I felt they were a "too-much-work-for-zero-hype" kinda situation. If it wasn't fun, I was out.</p>
+
+      <p>So when these same people saw me sweating over building this site from the ground up, and actually writing long-form blogs (I used to HATE anything related to writing), they were genuinely tripping. They're used to seeing someone whose baseline state is doing calisthenics, playing Minecraft, watching movies, or literally just lying dead like a corpse all day. Seeing me suddenly pull all-nighters to ship code and write essays was straight-up <em>"glitch-in-the-matrix"</em> behaviour for them 💀💀💀</p>
+
+      <p>They asked me point-blank: <em>"Why are you suddenly so worked up over building this site and making something new?"</em></p>
+
+      <p>Short answer…….. I finally found my own adrenaline.</p>
+
+      <p>After doing some self-observation, I realized I only hit my absolute peak performance when I have something to prove, or a clear win to unlock at the end of a task. It comes back to what I mentioned in an earlier post: that innate ego that just strives to win. Always.</p>
+
+      <p>It’s not about belittling anyone else; it’s just that accepting defeat inside my own head is simply not an option. Does that mean I never lose? Of course not. I’ve taken my fair share of Ls, and I have genuine respect for anyone who outplays me. That’s just the sportsman mindset I picked up back in the day: respect the opponent, learn from the loss, adapt, and come back sharper.</p>
+
+      <p>And talking about adapting and refusing to lose... I have a massive update on the F1 dashboard !!!!</p>
+
+      <p>We actually hit a massive milestone today! I stopped building a basic-yet-clunky F1 dashboard and started building a legit F1 telemetry platform😁😎</p>
+
+      <h2>F1 Telemetry Engine (Part 1): Scrapping the Prototype for Something that Actually Works</h2>
+
+      <p>Remember the 2023 Monza GP simulation I showed you guys in the mid-week drop? The one that looked like a crude Matplotlib plot but put my poor laptop into a 5-hour coma? 😅</p>
+
+      <p>Well, once the machine finally woke up and I had some time to think, a harsh reality hit me. I wasn't actually building the legit F1 hub I was dreaming of. I had just duct-taped together some code that worked for exactly one specific race🫠🫠🫠</p>
+
+      <h2>The Monza Prototype & The Hardcoded Wall</h2>
+
+      <p>My initial proof-of-concept was grabbing FastF1 data, push it through a Python backend, and stream it to an HTML/JS dashboard. It worked, but it had a fatal flaw—it was hardcoded only for the 2023 Monza Qualifying session😅😅</p>
+
+      <p>If I wanted to add another track or compare two different drivers, I'd have to rewrite half the application. It was a "rewrite-everything-and-cry" kinda situation😭😭.</p>
+
+      <p>That brought up the ultimate question: <em>How do I build this so that adding a new race later requires zero code changes???</em></p>
+
+      <h2>Creating A New Repo</h2>
+
+      <p>My portfolio site(this website) lives on GitHub Pages, which is amazing for static HTML and CSS, but it absolutely cannot run a Python backend or process heavy data. Instead of cramming everything into one chaotic codebase, I created an entirely new repo (<code>f1-telemetry-api</code>) deployed on Render to handle the heavy data and FastF1 API stuff. Sounds smart ryt?? Ik im goated😎🗿</p>
+
+      <p>This keeps the main portfolio clean while the backend evolves independently on its own cloud server. Hopefully, no more frying my local motherboard💀💀💀</p>
+
+      <h2>A New Mindset</h2>
+
+      <p>The biggest mental shift was killing the idea of building an "Abu Dhabi 2025 Dashboard" and instead building a dynamic system where Abu Dhabi is simply a dataset.</p>
+
+      <p>I redesigned the system around a clean, logical data hierarchy:</p>
+
+      <pre style="background: rgba(0,0,0,0.5); padding: 15px; border-radius: 8px; color: #fff; font-family: 'JetBrains Mono', monospace; border: 1px solid rgba(255,255,255,0.1); overflow-x: auto; margin: 20px 0;">
+📂 Season 
+ └── 📂 Grand Prix 
+     └── 📂 Session 
+         └── 📂 Driver 
+             └── 📄 Telemetry</pre>
+
+      <p>Adding a new race in 2026 will literally just mean dropping a new folder into the dataset directory. No backend rewrites required!!! Pure plug-and-play baby😏😏😏(to any recruiters reading this, I will not accept anything less than 50k a month, it’s a fair deal to hire someone as legendary as I’m🗿😎😁)</p>
+
+      <p><strong>So, what's next?</strong></p>
+
+      <p>Now that my frontend and backend aren't fighting each other, the next headache was figuring out how to actually handle hundreds of thousands of data points without sending the cloud servers into a coma.</p>
+
+      <p>This much technical info might have made u leave this blog mid-way already…..attention span of a goldfish. So I’ll do u a favour and stop here for now. In Part 2, I’ll break down exactly how I managed to store all this madness—and why using normal CSV files was instantly rejected. </p>
+
+      <p>Anyway, I need to get off this chair and go do my calisthenics routine—I completely missed my pull-ups and squats today because I was glued to the monitor. Maybe I'll hop on for a quick Minecraft session later to decompress.</p>
+      
+      <p>Wish me luck goldfishes. Peace out✌️</p>
+    </div>
+
+    <!-- CARD 2: The Share Section -->
+    <div class="container" style="text-align: center; padding-top: 25px;">
+      <p style="margin-bottom: 5px;"><strong>If this chaos somehow resonated with you, go bother a friend with the link.</strong></p>
+      <div class="share-buttons">
+        <a href="https://twitter.com/intent/tweet?text=Check out this new blog post by Swayam!&url=https://swayamjagtap.github.io/posts/week-07.html" target="_blank" rel="noopener noreferrer" class="share-btn twitter">X (Twitter)</a>
+        <a href="https://api.whatsapp.com/send?text=Check out Swayam's latest drop! https://swayamjagtap.github.io/posts/week-07.html" target="_blank" rel="noopener noreferrer" class="share-btn whatsapp">WhatsApp</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://swayamjagtap.github.io/posts/week-07.html" target="_blank" rel="noopener noreferrer" class="share-btn linkedin">LinkedIn</a>
+        <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="share-btn copy">Copy Link</button>
+      </div>
+    </div>
+    
+    <!-- CARD 3: The Comments Section -->
+    <div class="container">
+      <div id="graphcomment"></div>
+      <script type="text/javascript">
+        var __semio__params = {
+          graphcommentId: "swayam-jagtap-blog", 
+          behaviour: {
+            uid: window.location.pathname, 
+          },
+        }
+        function __semio__onload() {
+          __semio__gc_graphlogin(__semio__params)
+        }
+        (function() {
+          var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
+          gc.onload = __semio__onload; gc.defer = true; gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
+        })();
+      </script>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Swayam Jagtap</p>
+  </footer>
+
+  <!-- Particles initialization script -->
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#673AB7" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.6, "random": false },
+        "size": { "value": 3, "random": true },
+        "line_linked": {
+          "enable": true, "distance": 150, "color": "#673AB7", "opacity": 0.3, "width": 1
+        },
+        "move": { "enable": true, "speed": 2, "direction": "none", "out_mode": "out" }
+      },
+      "interactivity": {
+        "detect_on": "window",
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" }, 
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "grab": { "distance": 140, "line_linked": { "opacity": 0.8 } },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+</html>
