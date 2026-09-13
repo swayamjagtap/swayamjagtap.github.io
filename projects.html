@@ -3,39 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Projects | Swayam Jagtap</title>
 
   <!-- Open Graph meta tags -->
-  <meta property="og:title" content="Projects | Swayam Jagtap">
-  <meta property="og:description" content="A collection of my personal coding builds and open-source challenges.">
-  <meta property="og:type" content="website">
-  
+  <meta
+    property="og:title"
+    content="Projects | Swayam Jagtap"
+  >
+
+  <meta
+    property="og:description"
+    content="A collection of my personal coding builds and open-source challenges."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
   <!-- Google Fonts: Inter & JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-  
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
   <!-- Particles.js for the Interactive Background -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 
   <link rel="stylesheet" href="style.css" />
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PC6S28FE8Y"></script>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-PC6S28FE8Y"
+  ></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
 
     gtag('config', 'G-PC6S28FE8Y');
   </script>
 </head>
+
+
 <body>
+
   <!-- Interactive Background Container -->
   <div id="particles-js"></div>
 
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
   <header class="main-header">
+
     <h1>Projects</h1>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -43,128 +85,431 @@
       <a href="projects.html">Projects</a>
       <a href="academics.html">Academics</a>
     </nav>
+
   </header>
 
+
+  <!-- =====================================================
+       MAIN CONTENT
+       ===================================================== -->
+
   <main>
-    <!-- Bento Grid Wrapper -->
+
     <div class="bento-grid">
-      
-      <!-- Card 1: Overview -->
+
+
+      <!-- ===================================================
+           OVERVIEW
+           =================================================== -->
+
       <div class="bento-card full-width">
-        <h2>Overview</h2>
+
+        <h2>
+          Overview
+        </h2>
+
         <p>
-          Here’s where I keep the receipts. This is a collection of my personal coding builds—ranging 
-          from basic Python logic simulators to (eventually) heavy-duty data analysis models. 
-          Because watching tutorials is easy, but building things from scratch is where the actual learning 
-          (and debugging) happens.
+          Here’s where I keep the receipts. This is a collection
+          of my personal coding builds—ranging from basic Python
+          logic simulators to increasingly ambitious data,
+          automation and application projects.
+          Because watching tutorials is easy, but building things
+          from scratch is where the actual learning (and
+          debugging) happens.
         </p>
+
       </div>
 
-      <!-- Card 2: Completed Projects -->
+
+      <!-- ===================================================
+           F1 TELEMETRY PLATFORM
+           =================================================== -->
+
       <div class="bento-card full-width">
-        <h2>Completed projects</h2>
+
+        <h2>
+          F1 Telemetry Platform
+        </h2>
+
+        <p>
+          A dataset-driven F1 telemetry explorer built from
+          scratch using FastF1, FastAPI, WebSockets and a
+          browser-based dashboard.
+        </p>
+
+        <p>
+          Select a season, Grand Prix, session, drivers and
+          available laps, then stream processed telemetry
+          directly into the dashboard in real time.
+        </p>
+
+        <p
+          style="
+            color: var(--text-muted);
+            font-size: 0.95em;
+            margin-bottom: 20px;
+          "
+        >
+          <em>
+            Currently powered by a 2025 Abu Dhabi dataset, with
+            the platform designed to support additional seasons,
+            events and sessions without restructuring the
+            application.
+          </em>
+        </p>
+
+
+        <div
+          style="
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+          "
+        >
+
+          <!-- Open Dashboard -->
+          <a
+            href="projects/f1-telemetry/index.html"
+            class="share-btn copy"
+          >
+            🏎️ Open Telemetry Dashboard
+          </a>
+
+
+          <!-- Backend Repository -->
+          <a
+            href="https://github.com/swayamjagtap/f1-telemetry-api"
+            class="share-btn linkedin"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ⚙️ View Backend
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- ===================================================
+           COMPLETED PROJECTS
+           =================================================== -->
+
+      <div class="bento-card full-width">
+
+        <h2>
+          Completed projects
+        </h2>
+
         <ul>
-          
+
           <li>
-            <strong>Tip Calculator:</strong> 
-            A basic Python program that calculates the exact tip percentage for your bill.<br>
-            <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/tip-calculator.py" target="_blank" rel="noopener noreferrer">
-                View Code
+
+            <strong>
+              Tip Calculator:
+            </strong>
+
+            A basic Python program that calculates the exact
+            tip percentage for your bill.
+            <br>
+
+            <a
+              href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/tip-calculator.py"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Code
             </a>
+
           </li>
+
+
           <br>
+
+
           <li>
-            <strong>Pizza Order:</strong> 
-            This program simulates your pizza ordering experience, where every option you select dynamically 
-            updates your final bill.<br>
-            <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/pizza_order.py" target="_blank" rel="noopener noreferrer">
-                View Code
+
+            <strong>
+              Pizza Order:
+            </strong>
+
+            This program simulates your pizza ordering
+            experience, where every option you select dynamically
+            updates your final bill.
+            <br>
+
+            <a
+              href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/pizza_order.py"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Code
             </a>
+
           </li>
+
+
           <br>
+
+
           <li>
-            <strong>Roller Coaster:</strong> 
-            A simulation of the rollercoaster ticket-buying process. (You'll have to try it yourself to get a 
-            better understanding!)<br>
-            <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/roller_coaster.py" target="_blank" rel="noopener noreferrer">
-                View Code
+
+            <strong>
+              Roller Coaster:
+            </strong>
+
+            A simulation of the rollercoaster ticket-buying
+            process. (You'll have to try it yourself to get a
+            better understanding!)
+            <br>
+
+            <a
+              href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/roller_coaster.py"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Code
             </a>
+
           </li>
+
+
           <br>
+
+
           <li>
-            <strong>Treasure Game:</strong> 
-            A text-based adventure built on the logic from the Pizza and Roller Coaster programs. 
-            You have to choose your paths, and they might—or might <em>not</em>—lead you to the treasure.<br> 
-            <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/treasure_game.py" target="_blank" rel="noopener noreferrer">
-                View Code
+
+            <strong>
+              Treasure Game:
+            </strong>
+
+            A text-based adventure built on the logic from the
+            Pizza and Roller Coaster programs. You have to
+            choose your paths, and they might—or might <em>not</em>—
+            lead you to the treasure.
+            <br>
+
+            <a
+              href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/treasure_game.py"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Code
             </a>
+
           </li>
+
+
           <br>
+
+
           <li>
-            <strong>Rock-Paper-Scissors:</strong> 
-            The classic hand-gesture game, brought to life using Python and the 
-            <a href="https://docs.python.org/3/library/random.html" target="_blank">random</a> library.<br>
-            <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/rock-paper-scissors.py" target="_blank" rel="noopener noreferrer">
-                View Code
+
+            <strong>
+              Rock-Paper-Scissors:
+            </strong>
+
+            The classic hand-gesture game, brought to life
+            using Python and the
+            <a
+              href="https://docs.python.org/3/library/random.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              random
             </a>
+            library.
+            <br>
+
+            <a
+              href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/rock-paper-scissors.py"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Code
+            </a>
+
           </li>
+
+
           <br>
+
+
           <li>
-            <strong>Password Generator:</strong> 
-            A Python program that generates passwords based on your unique requirements. 
-            Want all characters, numbers, special characters, and symbols? I’ve got you covered!<br>
-            <a href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/password_generator.py" target="_blank" rel="noopener noreferrer">
-                View Code
+
+            <strong>
+              Password Generator:
+            </strong>
+
+            A Python program that generates passwords based on
+            your unique requirements. Want all characters,
+            numbers, special characters, and symbols? I’ve got
+            you covered!
+            <br>
+
+            <a
+              href="https://github.com/swayamjagtap/swayamjagtap.github.io/tree/main/projects/password_generator.py"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Code
             </a>
+
           </li>
 
         </ul>
+
       </div>
 
-      <!-- Clinkt Open-Source Challenge Card -->
+
+      <!-- ===================================================
+           CLINKT OPEN-SOURCE CHALLENGE
+           =================================================== -->
+
       <div class="bento-card full-width">
-        <h2>VibeHack'26: The Clinkt Open Investigation Challenge</h2>
+
+        <h2>
+          VibeHack'26: The Clinkt Open Investigation Challenge
+        </h2>
+
         <p>
-          Originally built as a live, high-pressure hackathon case study at MLDC, I've now open-sourced the entire quick-commerce crisis challenge. Step into the arena, examine the case files, and uncover what went wrong behind the scenes at Clinkt.
+          Originally built as a live, high-pressure hackathon
+          case study at MLDC, I've now open-sourced the entire
+          quick-commerce crisis challenge. Step into the arena,
+          examine the case files, and uncover what went wrong
+          behind the scenes at Clinkt.
         </p>
-        <p style="color: var(--text-muted); font-size: 0.95em; margin-bottom: 20px;">
-          <em>Case designed from scratch by Swayam Jagtap. If you build or deploy a solution, make sure to tag me on <a href="https://www.linkedin.com/in/swayam-jagtap" target="_blank" rel="noopener noreferrer">LinkedIn</a> or <a href="https://github.com/swayamjagtap" target="_blank" rel="noopener noreferrer">GitHub</a>!</em>
+
+        <p
+          style="
+            color: var(--text-muted);
+            font-size: 0.95em;
+            margin-bottom: 20px;
+          "
+        >
+          <em>
+            Case designed from scratch by Swayam Jagtap.
+            If you build or deploy a solution, make sure to tag
+            me on
+            <a
+              href="https://www.linkedin.com/in/swayam-jagtap"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+            or
+            <a
+              href="https://github.com/swayamjagtap"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>!
+          </em>
         </p>
-        
-        <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
+
+
+        <div
+          style="
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+          "
+        >
+
           <!-- Button 1: Preview Newspaper PDF -->
-          <a href="projects/clinkt-investigation/Problem_Statement.pdf" target="_blank" rel="noopener noreferrer" class="share-btn copy">
+          <a
+            href="projects/clinkt-investigation/Problem_Statement.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="share-btn copy"
+          >
             📰 Read Newspaper Brief (PDF)
           </a>
-          
-          <!-- Button 2: Download Submission Guidelines PDF -->
-          <a href="projects/clinkt-investigation/CLINKT_OPEN_SOURCE_SUBMISSION_GUIDELINES.pdf" target="_blank" rel="noopener noreferrer" class="share-btn linkedin">
+
+
+          <!-- Button 2: Submission Guidelines -->
+          <a
+            href="projects/clinkt-investigation/CLINKT_OPEN_SOURCE_SUBMISSION_GUIDELINES.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="share-btn linkedin"
+          >
             📄 Open-Source Guidelines
           </a>
 
-          <!-- Button 3: Download Complete Case File Zip -->
-          <a href="projects/clinkt-investigation/CLINKT_CASE_FILE.zip" class="share-btn twitter" download style="background-color: #673AB7;">
+
+          <!-- Button 3: Complete Case File -->
+          <a
+            href="projects/clinkt-investigation/CLINKT_CASE_FILE.zip"
+            class="share-btn twitter"
+            download
+            style="background-color: #673AB7;"
+          >
             📥 Download Case File (.zip)
           </a>
+
         </div>
+
       </div>
 
+
     </div>
+
   </main>
 
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
   <footer>
-    <p>&copy; 2026 Swayam Jagtap</p>
+
+    <p>
+      &copy; 2026 Swayam Jagtap
+    </p>
+
   </footer>
 
-  <!-- Particles initialization script -->
+
+  <!-- =====================================================
+       PARTICLES INITIALIZATION
+       ===================================================== -->
+
   <script>
     particlesJS("particles-js", {
+
       "particles": {
-        "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
-        "color": { "value": "#673AB7" }, /* Vivid Violet Nodes */
-        "shape": { "type": "circle" },
-        "opacity": { "value": 0.6, "random": false },
-        "size": { "value": 3, "random": true },
+
+        "number": {
+          "value": 60,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+
+        "color": {
+          "value": "#673AB7"
+        },
+
+        "shape": {
+          "type": "circle"
+        },
+
+        "opacity": {
+          "value": 0.6,
+          "random": false
+        },
+
+        "size": {
+          "value": 3,
+          "random": true
+        },
+
         "line_linked": {
           "enable": true,
           "distance": 150,
@@ -172,21 +517,58 @@
           "opacity": 0.3,
           "width": 1
         },
-        "move": { "enable": true, "speed": 2, "direction": "none", "out_mode": "out" }
-      },
-      "interactivity": {
-        "detect_on": "window",
-        "events": {
-          "onhover": { "enable": true, "mode": "grab" }, 
-          "onclick": { "enable": true, "mode": "push" }
-        },
-        "modes": {
-          "grab": { "distance": 140, "line_linked": { "opacity": 0.8 } },
-          "push": { "particles_nb": 4 }
+
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "out_mode": "out"
         }
+
       },
+
+
+      "interactivity": {
+
+        "detect_on": "window",
+
+        "events": {
+
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          }
+
+        },
+
+
+        "modes": {
+
+          "grab": {
+            "distance": 140,
+            "line_linked": {
+              "opacity": 0.8
+            }
+          },
+
+          "push": {
+            "particles_nb": 4
+          }
+
+        }
+
+      },
+
+
       "retina_detect": true
+
     });
   </script>
+
 </body>
 </html>
