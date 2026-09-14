@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mid-Week Drop: MX4D, Heavy Luggage, and Max Running a Tractor to P2 🗿</title>
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Particles.js for the Interactive Background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+  <link rel="stylesheet" href="../style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PC6S28FE8Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PC6S28FE8Y');
+  </script>
+</head>
+<body>
+  <!-- Interactive Background Container -->
+  <div id="particles-js"></div>
+
+  <header class="main-header">
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../academics.html">Academics</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- CARD 1: The Main Blog Post -->
+    <div class="container">
+      <h1>Mid-Week Drop: MX4D, Heavy Luggage, and Max Running a Tractor to P2 🗿</h1>
+      <p class="date">September 14, 2026</p>
+
+      <p>Starting the day with an MX4D movie and a Good Flippin’ Sausy Cluckinator meal at Skycity—ALL FOR FREE, thanks to my best friend 😎♥️—and finishing the day with Max running that tractor to a P2 finish.</p>
+      
+      <p>Honestly, the best day I’ve had in a veryyyyyyyyy longgggggg time.</p>
+      
+      <p>The day before yesterday, my best friend randomly came up to me and said, “Let’s go to the movies!” I was like, “Hmm, let me think. I have work to take care of and stuff…” In reality, I was just mad at her for some reason that even I don’t remember anymore 😅😅</p>
+      
+      <p>With an awesome, goated brain comes silly forgetfulness.</p>
+      
+      <p>She finally convinced me when I heard the movie was in MX4D. At that point, negotiations were over. I’ll show up for almost anything if it involves IMAX, Insignia, or 4D 😁</p>
+      
+      <p>So off we went. The movie was actually quite good. I would tell you what it was called, but unfortunately, my brain decided that remembering the name was an optional feature 😭</p>
+      
+      <p>After that, we went to Good Flippin’, where I had the Sausy Cluckinator with peri-peri fries, cheese dip, and a classic OG Coke.</p>
+      
+      <p>And the best part?</p>
+      
+      <p><strong>ALL PAID FOR BY</strong> Hon. Ms. “Check the comments to know who.” 🗿</p>
+      
+      <p>Then I had to hurry home because Chaturthi was the next day and I still hadn’t packed my bags. My family had already left because they were tired of waiting for me—which is understandable, honestly 😅</p>
+      
+      <p>But they did make sure to leave all the heavy luggage behind. They went ahead with a single carry bag each. I, on the other hand, had to carry the entire family’s contribution to civilisation.</p>
+      
+      <p>So there I was, transporting all that luggage to my grandfather’s place, which is around 40 km away, through Mumbai’s peak festive traffic and public transport 🫠😭</p>
+      
+      <p>Still, it was worth it.</p>
+      
+      <p>A tiramisu brownie thick shake was waiting for me at the end of the journey, and I believe every difficult life decision should come with dessert 😋</p>
+      
+      <p>The day was already pretty much perfect, but then another Chaturthi gift arrived. Max finished P2 at Madrid. MAX. FINISHED. P2.</p>
+      
+      <p>That tractor somehow made it to the podium, and I was absolutely here for it. After all the recent suffering, I’ll take that result with both hands 😭❤️‍🩹</p>
+      
+      <p>Naturally, after thinking about F1, I remembered that I also had some heavy lifting to do on my own F1 telemetry project.</p>
+      
+      <p>I didn’t get much done that day because, frankly, I had already completed enough side quests to qualify as an RPG protagonist. But I did manage to work on one small part of the project. And that small part was enough to make me question one of my earlier decisions.</p>
+      
+      <p>A very stupid decision.</p>
+      
+      <p>A decision made by someone who clearly thought future problems were a “future me” issue. Unfortunately, future me was also me.</p>
+
+      <h2>The CSV Problem 😅😅</h2>
+      
+      <p>When I first started building the telemetry platform, I needed somewhere to store all the data coming from FastF1. The obvious choice was CSV 🤷‍♂️… It’s simple, readable, easy to inspect, and almost every tool on Earth knows how to work with it.</p>
+      
+      <p>For a small dataset, CSV is perfectly fine.</p>
+      
+      <p>But F1 telemetry is not exactly a small dataset. A single session can contain data from multiple drivers, hundreds of laps, and thousands of telemetry points per lap. Once you start combining position, speed, throttle, brake, gear, RPM, time, and other information, the number of rows starts becoming ridiculous.</p>
+      
+      <p>And my original thought process was basically…. “It’s just data. Put it in CSV. What could possibly go wrong?”</p>
+      
+      <p>Famous last words.</p>
+      
+      <p>The problem with CSV is that it stores everything as plain text. It doesn’t really care whether a column contains numbers, timestamps, or repeated values. It just stores the information row by row. That makes it convenient, but not particularly efficient when the dataset starts getting large.</p>
+      
+      <p>And my project was supposed to become reusable.</p>
+      
+      <p>I didn’t want to build a dashboard that only worked for one race, one session, or one driver. I wanted to eventually be able to select something like:</p>
+      
+      <p>2025 → Abu Dhabi → Qualifying → Verstappen vs Norris</p>
+      
+      <p>…and have the application load the correct data without me manually rewriting half the backend.</p>
+      
+      <p>That meant the storage system also had to be designed for scale. So I started looking into better options and eventually landed on Parquet.</p>
+      
+      <p>Parquet is a column-based storage format, which basically means it stores data by columns instead of treating every row as one giant block of text. That matters because telemetry usually involves selecting specific columns.</p>
+      
+      <p>For example, if I only need:</p>
+      
+      <ul>
+        <li>Time</li>
+        <li>X and Y position</li>
+        <li>Speed</li>
+        <li>Throttle</li>
+        <li>Brake</li>
+      </ul>
+      
+      <p>…I shouldn’t have to load every single piece of information stored in the dataset just to display those values.</p>
+      
+      <p>Parquet makes that kind of selective loading much more practical. It is also better suited for large structured datasets and generally handles compression more efficiently than plain CSV.</p>
+      
+      <p>So instead of treating my telemetry data like a giant spreadsheet that I keep throwing more rows into, I started organising it into a proper dataset structure.</p>
+      
+      <p>The idea is simple: each session should have its own data, and the backend should be able to discover what is available rather than relying on hardcoded filenames and assumptions. This is the point where the project started feeling less like:</p>
+      
+      <p>“I made an F1 dashboard.”</p>
+      
+      <p>…and more like:</p>
+      
+      <p>“I’m actually building a platform that can support an F1 dashboard.”</p>
+      
+      <p>Which is a much nicer way of saying I had to clean up the mess I created earlier. The CSV decision wasn’t the end of the world, but it was definitely one of those moments where I had to stop and ask myself:</p>
+      
+      <p>“Was this a smart engineering decision, or did I just want the easiest option because I was excited to see the dashboard working?”</p>
+      
+      <p>The answer was, unfortunately, both.</p>
+      
+      <p>Damnnn I covered 4 pages on my Word doc already 😅…. lets stop here or else I would start losing my goldfishes 😭😭</p>
+      
+      <p>For now, the latest progress is getting the storage side into a more sensible shape—moving away from the basic CSV approach and toward Parquet-based telemetry data that the backend can work with more efficiently.</p>
+      
+      <p>There’s still a lot left to do, but at least the project is slowly becoming something that won’t collapse the moment I ask it to handle another race.</p>
+      
+      <p>Unlike certain Red Bull machinery 🗿</p>
+    </div>
+
+    <!-- CARD 2: The Share Section -->
+    <div class="container" style="text-align: center; padding-top: 25px;">
+      <p style="margin-bottom: 5px;"><strong>If this chaos somehow resonated with you, go bother a friend with the link.</strong></p>
+      <div class="share-buttons">
+        <a href="https://twitter.com/intent/tweet?text=Check out this new mid-week blog post by Swayam!&url=https://swayamjagtap.github.io/posts/mid-week-drop.html" target="_blank" rel="noopener noreferrer" class="share-btn twitter">X (Twitter)</a>
+        <a href="https://api.whatsapp.com/send?text=Check out Swayam's latest mid-week drop! https://swayamjagtap.github.io/posts/mid-week-drop.html" target="_blank" rel="noopener noreferrer" class="share-btn whatsapp">WhatsApp</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://swayamjagtap.github.io/posts/mid-week-drop.html" target="_blank" rel="noopener noreferrer" class="share-btn linkedin">LinkedIn</a>
+        <button onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" class="share-btn copy">Copy Link</button>
+      </div>
+    </div>
+    
+    <!-- CARD 3: The Comments Section -->
+    <div class="container">
+      <div id="graphcomment"></div>
+      <script type="text/javascript">
+        var __semio__params = {
+          graphcommentId: "swayam-jagtap-blog", 
+          behaviour: {
+            uid: window.location.pathname, 
+          },
+        }
+        function __semio__onload() {
+          __semio__gc_graphlogin(__semio__params)
+        }
+        (function() {
+          var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
+          gc.onload = __semio__onload; gc.defer = true; gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
+        })();
+      </script>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Swayam Jagtap</p>
+  </footer>
+
+  <!-- Particles initialization script -->
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#673AB7" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.6, "random": false },
+        "size": { "value": 3, "random": true },
+        "line_linked": {
+          "enable": true, "distance": 150, "color": "#673AB7", "opacity": 0.3, "width": 1
+        },
+        "move": { "enable": true, "speed": 2, "direction": "none", "out_mode": "out" }
+      },
+      "interactivity": {
+        "detect_on": "window",
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" }, 
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "grab": { "distance": 140, "line_linked": { "opacity": 0.8 } },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+</html>
