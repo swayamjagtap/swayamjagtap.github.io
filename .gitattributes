@@ -1,0 +1,7 @@
+.githooks/* text eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.xml text eol=lf
+robots.txt text eol=lf
